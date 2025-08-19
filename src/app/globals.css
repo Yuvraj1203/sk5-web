@@ -1,0 +1,148 @@
+@import "tailwindcss";
+@plugin './hero.ts';
+/* Note: You may need to change the path to fit your project structure */
+@source '../../node_modules/@heroui/theme/dist/**/*.{js,ts,jsx,tsx}';
+@custom-variant dark (&:is(.dark *));
+
+:root {
+  --foreground: #171717;
+  --primary: #006c48;
+  --on-primary: #ffffff;
+  --primary-container: #85f9c0;
+  --on-primary-container: #002113;
+  --secondary: #4d6356;
+  --on-secondary: #ffffff;
+  --secondary-container: #d0e8d8;
+  --on-secondary-container: #0a1f15;
+  --tertiary: #3c6472;
+  --on-tertiary: #ffffff;
+  --tertiary-container: #c0e9fa;
+  --on-tertiary-container: #001f28;
+  --error: #ba1a1a;
+  --on-error: #ffffff;
+  --error-container: #ffdad6;
+  --on-error-container: #410002;
+  --background: #fbfdf8;
+  --on-background: #191c1a;
+  --surface: #fbfdf8;
+  --on-surface: #191c1a;
+  --surface-variant: #dce5dd;
+  --on-surface-variant: #404943;
+  --outline: #707972;
+  --outline-variant: #c0c9c1;
+  --shadow: #000000;
+  --scrim: #000000;
+  --inverse-surface: #2e312f;
+  --inverse-on-surface: #eff1ed;
+  --inverse-primary: #67dca5;
+
+  /* Elevation */
+  --elevation-level0: #EEF6EF00;
+  --elevation-level1: #eef6ef;
+  --elevation-level2: #e7f1ea;
+  --elevation-level3: #dfe7e5;
+  --elevation-level4: #dde6e3;
+  --elevation-level5: #d8e9df;
+}
+
+@theme inline {
+--color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-primary: var(--primary);
+  --color-on-primary: var(--on-primary);
+  --color-primary-container: var(--primary-container);
+  --color-on-primary-container: var(--on-primary-container);
+  --color-secondary: var(--secondary);
+  --color-on-secondary: var(--on-secondary);
+  --color-secondary-container: var(--secondary-container);
+  --color-on-secondary-container: var(--on-secondary-container);
+  --color-tertiary: var(--tertiary);
+  --color-on-tertiary: var(--on-tertiary);
+  --color-tertiary-container: var(--tertiary-container);
+  --color-on-tertiary-container: var(--on-tertiary-container);
+  --color-error: var(--error);
+  --color-on-error: var(--on-error);
+  --color-error-container: var(--error-container);
+  --color-on-error-container: var(--on-error-container);
+  --color-on-background: var(--on-background);
+  --color-surface: var(--surface);
+  --color-on-surface: var(--on-surface);
+  --color-surface-variant: var(--surface-variant);
+  --color-on-surface-variant: var(--on-surface-variant);
+  --color-outline: var(--outline);
+  --color-outline-variant: var(--outline-variant);
+  --color-shadow: var(--shadow);
+  --color-scrim: var(--scrim);
+  --color-inverse-surface: var(--inverse-surface);
+  --color-inverse-on-surface: var(--inverse-on-surface);
+  --color-inverse-primary: var(--inverse-primary);
+
+  /* Elevation */
+  --color-elevation-level0: var(--elevation-level0);
+  --color-elevation-level1: var(--elevation-level1);
+  --color-elevation-level2: var(--elevation-level2);
+  --color-elevation-level3: var(--elevation-level3);
+  --color-elevation-level4: var(--elevation-level4);
+  --color-elevation-level5: var(--elevation-level5);
+
+  --color-surface-disabled: var(--surface-disabled);
+  --color-on-surface-disabled: var(--on-surface-disabled);
+  --color-backdrop: var(--backdrop);
+  --color-light-primary-container: var(--light-primary-container);
+  --font-poppins: var(--font-poppins);
+  /* --font-mono: var(--font-geist-mono); */
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --foreground: #ededed;
+    --primary: #67dca5;
+  --on-primary: #003823;
+  --primary-container: #005235;
+  --on-primary-container: #85f9c0;
+  --secondary: #b4ccbc;
+  --on-secondary: #203529;
+  --secondary-container: #364b3f;
+  --on-secondary-container: #d0e8d8;
+  --tertiary: #a4cddc;
+  --on-tertiary: #053542;
+  --tertiary-container: #234c5a;
+  --on-tertiary-container: #c0e9fa;
+  --error: #ffb4ab;
+  --on-error: #690005;
+  --error-container: #93000a;
+  --on-error-container: #ffb4ab;
+  --background: #191c1a;
+  --on-background: #e1e3df;
+  --surface: #191c1a;
+  --on-surface: #e1e3df;
+  --surface-variant: #404943;
+  --on-surface-variant: #c0c9c1;
+  --outline: #8a938c;
+  --outline-variant: #404943;
+  --shadow: #000000;
+  --scrim: #000000;
+  --inverse-surface: #e1e3df;
+  --inverse-on-surface: #2e312f;
+  --inverse-primary: #006c48;
+
+  /* Elevation */
+  --elevation-level0: #EEF6EF00;
+  --elevation-level1: #1d2621;
+  --elevation-level2: #1f2b25;
+  --elevation-level3: #223129;
+  --elevation-level4: #22332b;
+  --elevation-level5: #24372e;
+
+  --surface-disabled: #e1e3df1f;
+  --on-surface-disabled: #e1e3df61;
+  --backdrop: #2a322d66;
+  --light-primary-container: #85f9c025;
+  }
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-poppins);
+}
