@@ -26,7 +26,7 @@
   --on-background: #191c1a;
   --surface: #fbfdf8;
   --on-surface: #191c1a;
-  --surface-variant: #dce5dd;
+  --surface-variant: #e8ebe8;
   --on-surface-variant: #404943;
   --outline: #707972;
   --outline-variant: #c0c9c1;
@@ -43,9 +43,25 @@
   --elevation-level3: #dfe7e5;
   --elevation-level4: #dde6e3;
   --elevation-level5: #d8e9df;
+
+    --surface-disabled: #191c1a1f;
+  --on-surface-disabled: #191c1a61;
+  --backdrop: #2a322d66;
+  --light-primary-container: #85f9c025;
+
+  /* shadow  */
+  --faq-out-shadow : 2px 8px 10px 0px #8aa4961f, -1px -1px 6px 0px #8aa4961f;
+  --faq-inside-shadow : inset 2px 8px 10px 0px #8aa4961f;
+  --faq-both-shadow: 2px 8px 10px 0px #8aa4961f, inset 2px 8px 10px 0px #8aa4961f;
 }
 
 @theme inline {
+   /* shadow  */
+    --shadow-faq-out-shadow : var(--faq-out-shadow);
+    --shadow-faq-inside-shadow : var(--faq-inside-shadow);
+    --shadow-faq-both-shadow : var(--faq-both-shadow);
+
+    /* color  */
 --color-background: var(--background);
   --color-foreground: var(--foreground);
   --color-primary: var(--primary);
