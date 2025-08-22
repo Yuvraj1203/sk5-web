@@ -28,7 +28,7 @@
   --on-surface: #191c1a;
   --surface-variant: #e8ebe8;
   --on-surface-variant: #404943;
-  --outline: #707972;
+  --outline: #9fa1a0;
   --outline-variant: #c0c9c1;
   --shadow: #000000;
   --scrim: #000000;
@@ -53,6 +53,7 @@
   --faq-out-shadow : 2px 8px 10px 0px #8aa4961f, -1px -1px 6px 0px #8aa4961f;
   --faq-inside-shadow : inset 2px 8px 10px 0px #8aa4961f;
   --faq-both-shadow: 2px 8px 10px 0px #8aa4961f, inset 2px 8px 10px 0px #8aa4961f;
+  --navbar-shadow: 0px 20px 30px #53585d0d, 0px 0px 30px #53585d1a;
 }
 
 @theme inline {
@@ -60,6 +61,7 @@
     --shadow-faq-out-shadow : var(--faq-out-shadow);
     --shadow-faq-inside-shadow : var(--faq-inside-shadow);
     --shadow-faq-both-shadow : var(--faq-both-shadow);
+    --shadow-navbar-shadow : var(--navbar-shadow);
 
     /* color  */
 --color-background: var(--background);
@@ -154,6 +156,12 @@
   --on-surface-disabled: #e1e3df61;
   --backdrop: #2a322d66;
   --light-primary-container: #85f9c025;
+
+    /* shadow  */
+  --faq-out-shadow : 2px 8px 10px 0px #8aa4961f, -1px -1px 6px 0px #8aa4961f;
+  --faq-inside-shadow : inset 2px 8px 10px 0px #8aa4961f;
+  --faq-both-shadow: 2px 8px 10px 0px #8aa4961f, inset 2px 8px 10px 0px #8aa4961f;
+  --navbar-shadow: 0px 20px 30px #53585d0d, 0px 0px 30px #53585d1a;
   }
 }
 

@@ -2,15 +2,15 @@ import React from "react";
 
 type SectionProps = {
   children?: React.ReactNode;
-  bgColor?: string;
+  containerStyle?: string;
   className?: string;
 };
 
-const Section = ({ bgColor, children, className }: SectionProps) => {
+const Section = ({ containerStyle, children, className }: SectionProps) => {
   return (
-    <div className={`${bgColor}`}>
+    <div className={`${containerStyle}`}>
       <section
-        className={`${className} max-w-[1100px] mx-auto px-4 py-8 md:py-14 xl:py-24`}
+        className={`${className} max-w-[1100px] mx-auto px-4 py-8 md:py-14 xl:py-24  `}
       >
         {children}
       </section>
