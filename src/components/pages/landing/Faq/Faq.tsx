@@ -50,7 +50,7 @@ export type FaqDataModel = (typeof faqData)[number];
 
 const Faq = () => {
   return (
-    <Section>
+    <Section containerStyle="bg-on-primary">
       <SectionHeading className="text-center">
         {"Frequently Asked Questions"}
       </SectionHeading>

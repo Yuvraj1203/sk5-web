@@ -1,0 +1,193 @@
+"use client";
+import React, { useRef, useState } from "react";
+// Import Swiper React components
+import { Swiper, SwiperSlide } from "swiper/react";
+
+// Import Swiper styles
+import "swiper/css";
+import "swiper/css/pagination";
+import "swiper/css/navigation";
+
+// import required modules
+import { Autoplay, Navigation, EffectCards } from "swiper/modules";
+import CustomImage from "../CustomImage/CustomImage";
+import { FaQuoteRight } from "react-icons/fa";
+import { IoChevronBackOutline, IoChevronForwardOutline } from "react-icons/io5";
+
+const testimonialDataArray = [
+  {
+    id: 1,
+    picture:
+      "https://www.techpromarketing.com/wp-content/uploads/2024/04/Alan-Sielbeck-Safe-Network-Solutions.jpeg",
+    comment:
+      "SK5 helped us align our marketing goals with our sales team. Their strategic approach brought in quality leads that converted. We saw a 40% increase in ROI within 3 months.",
+    author: "Samantha Lee",
+    designation: "CMO, Horizon Software",
+  },
+  {
+    id: 2,
+    picture:
+      "https://www.techpromarketing.com/wp-content/uploads/2024/04/Alan-Sielbeck-Safe-Network-Solutions.jpeg",
+    comment:
+      "Their SEO and content strategy transformed our web traffic. We're now ranking on the first page for our top keywords and leads are more engaged than ever thanks to SK5.",
+    author: "David Kim",
+    designation: "Founder, Revamp Studios",
+  },
+  {
+    id: 3,
+    picture:
+      "https://www.techpromarketing.com/wp-content/uploads/2024/04/Alan-Sielbeck-Safe-Network-Solutions.jpeg",
+    comment:
+      "We struggled with brand messaging until SK5 stepped in. Their team crafted a compelling narrative that truly resonates with our audience.",
+    author: "Rachel Alvarez",
+    designation: "Marketing Director, NovaTech",
+  },
+  {
+    id: 4,
+    picture:
+      "https://www.techpromarketing.com/wp-content/uploads/2024/04/Alan-Sielbeck-Safe-Network-Solutions.jpeg",
+    comment:
+      "From social media campaigns to PPC management, SK5 has been a one-stop solution for our digital marketing needs. Professional, responsive, and effective.",
+    author: "James O'Connor",
+    designation: "COO, BrightPath Systems",
+  },
+  {
+    id: 5,
+    picture:
+      "https://www.techpromarketing.com/wp-content/uploads/2024/04/Alan-Sielbeck-Safe-Network-Solutions.jpeg",
+    comment:
+      "Our lead generation pipeline has never been this healthy. SK5's B2B strategy was exactly what we needed to reach decision-makers in our industry.",
+    author: "Laura Chen",
+    designation: "VP of Growth, FinEdge",
+  },
+  {
+    id: 6,
+    picture:
+      "https://www.techpromarketing.com/wp-content/uploads/2024/04/Alan-Sielbeck-Safe-Network-Solutions.jpeg",
+    comment:
+      "They didn’t just provide a service—they became part of our team. Our marketing operations feel like a well-oiled machine now, all thanks to SK5.",
+    author: "Michael Brooks",
+    designation: "CEO, CloudCore Solutions",
+  },
+  {
+    id: 7,
+    picture:
+      "https://www.techpromarketing.com/wp-content/uploads/2024/04/Alan-Sielbeck-Safe-Network-Solutions.jpeg",
+    comment:
+      "They didn’t just provide a service—they became part of our team. Our marketing operations feel like a well-oiled machine now, all thanks to SK5.",
+    author: "Steve Smith",
+    designation: "CTO, CloudCore Solutions",
+  },
+];
+
+const Carousel = () => {
+  const [testimonialData, setTestimonialData] = useState(testimonialDataArray);
+  const [slideIndex, setSlideIndex] = useState(4);
+  return (
+    <>
+      <Swiper
+        onSlideChange={({ realIndex }) => {
+          console.log("Centered Slide Real Index:", realIndex);
+          setSlideIndex(realIndex);
+          console.log("Centered Slide Data:", testimonialData[realIndex]);
+        }}
+        style={{
+          "--swiper-navigation-color": "#000000",
+          "--swiper-pagination-color": "#454545",
+          "--swiper-navigation-size": "44px",
+          paddingTop: "75px",
+          overflow: "visible",
+        }}
+        speed={500}
+        initialSlide={4}
+        loopAdditionalSlides={testimonialData.length * 2}
+        centeredSlides={true}
+        effect="cards"
+        // navigation={{
+        //   nextEl: ".custom-next",
+        //   prevEl: ".custom-prev",
+        // }}
+        slidesPerView={1.2} // Default for mobile
+        // centeredSlides={true}
+        spaceBetween={30}
+        breakpoints={{
+          1024: {
+            slidesPerView: 3.6,
+            spaceBetween: 30,
+            centeredSlides: true,
+          },
+          768: {
+            slidesPerView: 2.5,
+            spaceBetween: 20,
+            centeredSlides: true,
+          },
+        }}
+        autoplay={{
+          delay: 3000,
+          disableOnInteraction: false,
+        }}
+        modules={[Navigation, Autoplay, EffectCards]}
+        className="mySwiper !overflow-visible rounded-3xl"
+      >
+        {testimonialData.map((item, index) => {
+          return (
+            <SwiperSlide
+              key={item.id}
+              className={`${
+                slideIndex == index
+                  ? "grayscale-0 opacity-100"
+                  : "grayscale-100 opacity-60"
+              } swipper-slide relative flex flex-col shadow-faq-out-shadow  pt-20 rounded-3xl bg-on-primary`}
+            >
+              <CustomImage
+                src={item.picture}
+                height={130}
+                width={130}
+                alt="author image"
+                containerStyle={
+                  "absolute left-1/2 -translate-x-1/2 -top-[81px] rounded-full"
+                }
+                className="rounded-full"
+              />
+              <div
+                className="py-3 px-8 h-48 rounded-t-3xl"
+                // data-swiper-parallax="-200"
+              >
+                <p className="text-center italic text-lg line-clamp-5">
+                  {item.comment}
+                </p>
+              </div>
+              <div
+                className="flex flex-col relative gap-1 text-on-primary bg-gradient-to-r py-3 px-4 text-center rounded-b-3xl from-[#10A19A] to-[#2FAC6A]"
+                // data-swiper-parallax="-100"
+              >
+                <p className="text-xl font-semibold">{item.author}</p>
+                <p className="text-sm">{item.designation}</p>
+                <FaQuoteRight
+                  className="absolute z-0 text-primary opacity-25 right-4 top-1/2 -translate-y-1/2"
+                  size={40}
+                />
+              </div>
+            </SwiperSlide>
+          );
+        })}
+        <div className="flex items-center justify-center gap-4 pt-11">
+          <button className="custom-prev flex items-center justify-center size-12 rounded-full bg-on-primary shadow-faq-out-shadow cursor-pointer">
+            <IoChevronBackOutline
+              className="font-bold text-primary"
+              size={20}
+            />
+          </button>
+          <button className="custom-next flex items-center justify-center size-12 rounded-full bg-on-primary shadow-faq-out-shadow cursor-pointer">
+            <IoChevronForwardOutline
+              className="font-bold text-primary"
+              size={20}
+            />
+          </button>
+        </div>
+      </Swiper>
+    </>
+  );
+};
+
+export default Carousel;

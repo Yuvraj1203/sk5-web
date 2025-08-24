@@ -71,7 +71,10 @@ const Header = () => {
 
   const renderSublist = (item: subListType, index: number) => {
     return (
-      <span className="py-1.5 px-8 text-black hover:text-primary duration-400 text-nowrap cursor-pointer">
+      <span
+        key={index}
+        className="py-1.5 px-8 text-black hover:text-primary duration-400 text-nowrap cursor-pointer"
+      >
         {item.label}
       </span>
     );
@@ -81,18 +84,15 @@ const Header = () => {
     const isActive = pathname === item.href;
 
     return (
-      <div className="relative">
+      <div className="relative" key={index}>
         <Link
-          key={index}
           href={item.href}
           // onClick={() => sidebarStore.setSidebarSate(false)}
           onMouseEnter={() => setHoverItem(index)}
           onMouseLeave={() => setHoverItem(-1)}
           className={`${
-            isActive
-              ? "bg-primaryContainer text-primary py-4"
-              : "bg-background text-textColor hover:py-4"
-          } flex items-center gap-4 subTitle font-medium py-2.5 px-4 hover:bg-primaryContainer  hover:text-primary rounded-2xl cursor-pointer duration-400`}
+            isActive ? "text-primary py-4" : " text-textColor hover:py-4"
+          } flex items-center gap-4 subTitle font-medium py-2.5 px-4  hover:text-primary rounded-2xl cursor-pointer duration-400`}
         >
           <span className="text-nowrap">{item.label}</span>
           {item.subList?.length! > 0 && (
