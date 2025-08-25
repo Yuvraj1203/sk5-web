@@ -9,7 +9,7 @@ type FaqAccordianProps = {
 const FaqAccordian = ({ accordianData }: FaqAccordianProps) => {
   const [selectedKey, setSelectedKey] = useState(0);
   return (
-    <div>
+    <div className="mt-20">
       {accordianData.map((item, index) => {
         return (
           <Accordian

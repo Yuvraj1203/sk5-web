@@ -106,7 +106,7 @@ const Slick = () => {
   };
   return (
     <>
-      <Slider ref={sliderRef} {...settings} className="pt-20">
+      <Slider ref={sliderRef} {...settings} className="mt-20 md:mt-32">
         {testimonialData.map((item, index) => {
           return (
             <div
