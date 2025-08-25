@@ -7,9 +7,7 @@ type SectionSubHeadingProps = {
 
 const SectionSubHeading = ({ children, className }: SectionSubHeadingProps) => {
   return (
-    <p
-      className={`text-xl md:text-2xl xl:text-4xl font-semibold ${className}`}
-    >
+    <p className={`text-xl md:text-2xl xl:text-4xl font-semibold ${className}`}>
       {children}
     </p>
   );

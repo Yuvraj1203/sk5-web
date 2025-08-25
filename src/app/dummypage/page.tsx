@@ -2,7 +2,7 @@
 import { useState } from "react";
 import { motion } from "framer-motion";
 import { Button, Card, CardBody } from "@heroui/react";
-import FooterSecond from "@/components/layout/FooterSecond";
+import Footer from "@/components/layout/Footer";
 
 export default function Home() {
   const [form, setForm] = useState({ name: "", email: "", message: "" });
@@ -154,7 +154,7 @@ export default function Home() {
           )}
         </section>
       </main>
-      <FooterSecond />
+      <Footer />
     </>
   );
 }

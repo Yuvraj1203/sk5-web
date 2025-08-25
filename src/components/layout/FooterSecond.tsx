@@ -1,4 +1,6 @@
 // components/Footer.tsx
+"use client";
+import { Button } from "@heroui/react";
 import Link from "next/link";
 import {
   FaTwitter,
@@ -8,26 +10,26 @@ import {
 } from "react-icons/fa";
 
 const nav = [
-  { label: "Services", href: "/services" },
-  { label: "Pricing", href: "/pricing" },
-  { label: "Case Studies", href: "/case-studies" },
-  { label: "Blog", href: "/blog" },
-  { label: "Contact", href: "/contact" },
+  { label: "Services", href: "/" },
+  { label: "Pricing", href: "/" },
+  { label: "Case Studies", href: "/" },
+  { label: "Blog", href: "/" },
+  { label: "Contact", href: "/" },
 ];
 
 const resources = [
-  { label: "About Us", href: "/about" },
-  { label: "Careers", href: "/careers" },
-  { label: "FAQs", href: "/faq" },
-  { label: "Privacy Policy", href: "/privacy" },
-  { label: "Terms of Service", href: "/terms" },
+  { label: "About Us", href: "/" },
+  { label: "Careers", href: "/" },
+  { label: "FAQs", href: "/" },
+  { label: "Privacy Policy", href: "/" },
+  { label: "Terms of Service", href: "/" },
 ];
 
 const FooterSecond = () => {
   const year = new Date().getFullYear();
 
   return (
-    <footer className="border-t border-[--outline]/20 bg-gray-900 text-gray-300">
+    <footer className="border-t border-gray-700 bg-gray-900 text-gray-300">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         {/* Top: Brand + CTA */}
         <div className="flex flex-col gap-6 py-10 md:flex-row md:items-center md:justify-between">
@@ -51,7 +53,7 @@ const FooterSecond = () => {
 
           {/* Newsletter */}
           <form
-            className="w-full rounded-2xl border border-[--outline]/20 bg-background shadow-faq-out-shadow p-3 sm:w-[28rem]"
+            className="w-full rounded-2xl border border-gray-700 bg-background shadow-faq-out-shadow p-3 sm:w-[28rem]"
             onSubmit={(e) => e.preventDefault()}
           >
             <label htmlFor="newsletter" className="sr-only">
@@ -64,12 +66,9 @@ const FooterSecond = () => {
                 placeholder="Your email address"
                 className="w-full rounded-xl border border-[--outline]/30 bg-transparent px-3 py-2 outline-none placeholder:text-[--on-surface-variant] focus:border-[--primary]"
               />
-              <button
-                type="submit"
-                className="inline-flex items-center rounded-xl bg-[--primary] px-4 py-2 text-sm font-medium text-[--on-primary] hover:opacity-90 active:opacity-80"
-              >
+              <Button type="submit" color="danger" className="inline-flex ">
                 Subscribe
-              </button>
+              </Button>
             </div>
             <p className="mt-2 text-xs text-[--on-surface-variant]">
               By subscribing you agree to our{" "}
@@ -91,8 +90,8 @@ const FooterSecond = () => {
               Navigation
             </h3>
             <ul className="mt-4 space-y-2 text-sm">
-              {nav.map((item) => (
-                <li key={item.href}>
+              {nav.map((item, index) => (
+                <li key={index}>
                   <Link
                     href={item.href}
                     className="text-[--on-surface-variant] hover:text-[--primary]"
@@ -109,8 +108,8 @@ const FooterSecond = () => {
               Resources
             </h3>
             <ul className="mt-4 space-y-2 text-sm">
-              {resources.map((item) => (
-                <li key={item.href}>
+              {resources.map((item, index) => (
+                <li key={index}>
                   <Link
                     href={item.href}
                     className="text-[--on-surface-variant] hover:text-[--primary]"
@@ -141,28 +140,28 @@ const FooterSecond = () => {
               <Link
                 href="https://twitter.com"
                 aria-label="Twitter"
-                className="rounded-full border border-[--outline]/20 p-2 hover:border-[--primary] hover:text-[--primary]"
+                className="rounded-full border border-gray-700 p-2 hover:border-[--primary] hover:text-[--primary]"
               >
                 <FaTwitter className="h-4 w-4" />
               </Link>
               <Link
                 href="https://linkedin.com"
                 aria-label="LinkedIn"
-                className="rounded-full border border-[--outline]/20 p-2 hover:border-[--primary] hover:text-[--primary]"
+                className="rounded-full border border-gray-700 p-2 hover:border-[--primary] hover:text-[--primary]"
               >
                 <FaLinkedinIn className="h-4 w-4" />
               </Link>
               <Link
                 href="https://instagram.com"
                 aria-label="Instagram"
-                className="rounded-full border border-[--outline]/20 p-2 hover:border-[--primary] hover:text-[--primary]"
+                className="rounded-full border border-gray-700 p-2 hover:border-[--primary] hover:text-[--primary]"
               >
                 <FaInstagram className="h-4 w-4" />
               </Link>
               <Link
                 href="https://facebook.com"
                 aria-label="Facebook"
-                className="rounded-full border border-[--outline]/20 p-2 hover:border-[--primary] hover:text-[--primary]"
+                className="rounded-full border border-gray-700 p-2 hover:border-[--primary] hover:text-[--primary]"
               >
                 <FaFacebookF className="h-4 w-4" />
               </Link>

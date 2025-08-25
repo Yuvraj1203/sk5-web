@@ -1,9 +1,4 @@
-import {
-  Carousel,
-  Section,
-  SectionHeading,
-  SectionSubHeading,
-} from "@/components/common";
+import { SectionHeading, SectionSubHeading } from "@/components/common";
 import Slick from "@/components/common/Carousel/Slick";
 import React from "react";
 

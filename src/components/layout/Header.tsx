@@ -1,6 +1,6 @@
 "use client";
-import React, { useState } from "react";
-import { Section } from "../common";
+import React, { useEffect, useState } from "react";
+import { motion } from "framer-motion";
 import { Images } from "@/public";
 import CustomImage from "../common/CustomImage/CustomImage";
 import { usePathname } from "next/navigation";
@@ -24,50 +24,69 @@ const navbarList = [
   {
     label: "Home",
     icon: "",
-    href: "/dashboard",
+    href: "/Home",
   },
   {
     label: "Service",
     icon: "",
-    href: "/dashboard/tenant-creation",
+    href: "/service",
     subList: [
       {
         label: "Career",
         icon: "",
-        href: "/file-configs",
+        href: "/career",
       },
       {
         label: "About Us",
         icon: "",
-        href: "/typography",
+        href: "/about-us",
       },
       {
         label: "Contact Us",
         icon: "",
-        href: "/color-theming",
+        href: "/contact-us",
       },
     ],
   },
   {
     label: "Career",
     icon: "",
-    href: "/file-configs",
+    href: "/career",
   },
   {
     label: "About Us",
     icon: "",
-    href: "/typography",
+    href: "/about-us",
   },
   {
     label: "Contact Us",
     icon: "",
-    href: "/color-theming",
+    href: "/contact-us",
   },
 ];
 
 const Header = () => {
   const pathname = usePathname();
   const [hoverItem, setHoverItem] = useState(-1);
+  const [showHeader, setShowHeader] = useState(true);
+
+  useEffect(() => {
+    let lastScrollY = window.scrollY;
+
+    const handleScroll = () => {
+      if (window.scrollY > lastScrollY && window.scrollY > 50) {
+        // 👇 scrolling down
+        setShowHeader(false);
+      } else {
+        // 👆 scrolling up
+        setShowHeader(true);
+      }
+      lastScrollY = window.scrollY;
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
 
   const renderSublist = (item: subListType, index: number) => {
     return (
@@ -120,8 +139,14 @@ const Header = () => {
     );
   };
 
+  // /backdrop-saturate-150 backdrop-blur-sm
   return (
-    <header className="shadow sticky top-0 backdrop-saturate-150 backdrop-blur-sm z-50">
+    <motion.header
+      initial={{ y: 0 }}
+      animate={{ y: showHeader ? 0 : -100 }} // 👈 slide up/down
+      transition={{ duration: 0.3 }}
+      className="shadow sticky top-0 bg-background z-50"
+    >
       <div className="flex items-center justify-between max-w-[1100px] mx-auto px-4 py-1.5 md:py-2.5 ">
         <div className="">
           <CustomImage src={Images.appLogo} width={64} height={64} alt="logo" />
@@ -130,7 +155,7 @@ const Header = () => {
           {navbarList.map((item, index) => renderNavbarItem(item, index))}
         </nav>
       </div>
-    </header>
+    </motion.header>
   );
 };
 

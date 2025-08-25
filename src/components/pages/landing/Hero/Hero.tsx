@@ -1,8 +1,4 @@
-import {
-  Section,
-  SectionHeading,
-  SectionSubHeading,
-} from "@/components/common";
+import { Section, SectionHeading } from "@/components/common";
 import React from "react";
 
 const Hero = () => {

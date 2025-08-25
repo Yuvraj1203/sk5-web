@@ -8,7 +8,11 @@ type SectionHeadingProps = {
 const SectionHeading = ({ children, className }: SectionHeadingProps) => {
   return (
     <h2
-      className={` text-2xl md:text-3xl xl:text-5xl font-semibold ${className}`}
+      // initial={{ opacity: 0, y: 20 }}
+      // whileInView={{ opacity: 1, y: 0 }}
+      // transition={{ duration: 0.6 }}
+      // viewport={{ once: true, amount: 0.3 }}
+      className={` text-2xl md:text-3xl xl:text-5xl mb-4 font-semibold ${className}`}
     >
       {children}
     </h2>
