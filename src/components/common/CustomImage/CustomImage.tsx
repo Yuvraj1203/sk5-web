@@ -8,7 +8,7 @@ export enum ImageType {
 }
 
 type CustomImageProps = {
-  src: string | any;
+  src: string;
   width?: number | string;
   height?: number | string;
   alt?: string;

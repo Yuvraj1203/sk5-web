@@ -1,5 +1,4 @@
-import { SectionHeading, SectionSubHeading } from "@/components/common";
-import Slick from "@/components/common/Carousel/Slick";
+import { SectionHeading, SectionSubHeading, Slick } from "@/components/common";
 import React from "react";
 
 const Testimonial = () => {

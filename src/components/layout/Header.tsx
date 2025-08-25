@@ -10,12 +10,12 @@ import { IoIosArrowDown } from "react-icons/io";
 type subListType = {
   label: string;
   href: string;
-  icon: any;
+  icon: string;
 };
 
 type navbarListType = {
   label: string;
-  icon: any;
+  icon: string;
   href: string;
   subList?: subListType[];
 };

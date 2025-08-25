@@ -1,7 +1,6 @@
 "use client";
 import { FaqDataModel } from "@/components/pages/landing/Faq/Faq";
-import { Image } from "@heroui/react";
-import React, { useState } from "react";
+import React from "react";
 import { FaMinus, FaPlus } from "react-icons/fa";
 
 type AccordianProps = {

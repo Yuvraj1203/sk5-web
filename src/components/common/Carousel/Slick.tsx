@@ -84,7 +84,7 @@ const Slick = () => {
     sliderRef.current?.slickPrev();
   };
 
-  var settings = {
+  let settings = {
     dots: false,
     infinite: true,
     centerMode: true,

@@ -8,6 +8,7 @@ import {
   FaInstagram,
   FaFacebookF,
 } from "react-icons/fa";
+import CustomImage from "../common/CustomImage/CustomImage";
 
 const nav = [
   { label: "Services", href: "/" },
@@ -36,10 +37,12 @@ const FooterSecond = () => {
           <div>
             <Link href="/" className="inline-flex items-center gap-3">
               {/* If using next/image, replace with <Image /> */}
-              <img
+              <CustomImage
                 src="/images/logo/appLogo.png"
                 alt="Company logo"
-                className="h-7 w-auto"
+                height={28}
+                width={28}
+                className=" w-auto"
               />
               <span className="text-lg font-semibold tracking-tight">
                 SK5 Marketing Co.

@@ -1,5 +1,4 @@
 import { Section, SectionHeading } from "@/components/common";
-import Accordian from "@/components/common/Accordian/Accordian";
 import React from "react";
 import FaqAccordian from "./FaqAccordian";
 
