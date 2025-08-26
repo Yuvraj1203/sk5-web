@@ -3,7 +3,9 @@ import React from "react";
 
 const Hero = () => {
   return (
-    <Section containerStyle={`bg-gradient-to-b from-primary to-primary-shade`}>
+    <Section
+      containerStyle={`bg-gradient-to-r from-primary to-primary-container`}
+    >
       <SectionHeading className="text-on-primary text-center">
         {"Get MSP Leads. Drive Sales."}
       </SectionHeading>

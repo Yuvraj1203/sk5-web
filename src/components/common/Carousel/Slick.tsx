@@ -138,13 +138,13 @@ const Slick = () => {
                 </p>
               </div>
               <div
-                className="flex flex-col relative gap-1 text-on-primary bg-gradient-to-r py-3 px-4 text-center rounded-b-3xl from-[#10A19A] to-[#2FAC6A]"
+                className="flex flex-col relative gap-1 text-on-primary bg-gradient-to-r from-primary to-secondary py-3 px-4 text-center rounded-b-3xl"
                 // data-swiper-parallax="-100"
               >
                 <p className="text-xl font-semibold">{item.author}</p>
                 <p className="text-sm">{item.designation}</p>
                 <FaQuoteRight
-                  className="absolute z-0 text-primary opacity-25 right-4 top-1/2 -translate-y-1/2"
+                  className="absolute z-0 text-on-secondary opacity-25 right-4 top-1/2 -translate-y-1/2"
                   size={40}
                 />
               </div>

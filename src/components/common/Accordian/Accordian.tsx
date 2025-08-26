@@ -39,7 +39,7 @@ const Accordian = ({
           className={`relative ${
             selectedKey == accordianItem.id
               ? "bg-surface-disabled"
-              : "bg-gradient-to-r from-[#10A19A] to-[#2FAC6A]"
+              : "bg-gradient-to-r from-primary to-secondary"
           }  size-10 rounded-full cursor-pointer`}
         >
           <FaPlus

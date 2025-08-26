@@ -6,15 +6,43 @@
 
 :root {
   --foreground: #171717;
-  --primary: #006c48;
-  --primary-shade: #003926;
+  --primary: #017fa3;
+  --primary-shade: #003f50;
   --on-primary: #ffffff;
-  --primary-container: #85f9c0;
-  --on-primary-container: #002113;
-  --secondary: #4d6356;
-  --on-secondary: #ffffff;
-  --secondary-container: #d0e8d8;
-  --on-secondary-container: #0a1f15;
+  --primary-container: #a6eeff;
+  --on-primary-container: #001f26;
+
+  /* yellowiesh  */
+/* --secondary: #3a7f72;
+--on-secondary: #ffffff;
+--secondary-container: #bcefe2;
+--on-secondary-container: #00201a; */
+
+/* charcol black  */
+/* --secondary: #1a1a1a;
+--on-secondary: #ffffff;
+--secondary-container: #333333;
+--on-secondary-container: #f2f2f2; */
+
+/* Black-Blue Accent */
+--secondary: #0d1b2a;
+--on-secondary: #ffffff;
+--secondary-container: #243447;
+--on-secondary-container: #e6f0ff;
+
+/* Slate Black  */
+/* --secondary: #212121;
+--on-secondary: #ffffff;
+--secondary-container: #3a3a3a;
+--on-secondary-container: #fafafa; */
+
+/* Teal-Black Fusion  */
+/* --secondary: #002b33;
+--on-secondary: #ffffff;
+--secondary-container: #01444f;
+--on-secondary-container: #e0f7fa; */
+
+
   --tertiary: #3c6472;
   --on-tertiary: #ffffff;
   --tertiary-container: #c0e9fa;
@@ -23,7 +51,7 @@
   --on-error: #ffffff;
   --error-container: #ffdad6;
   --on-error-container: #410002;
-  --background: #f5f5f5;
+  --background: #ebf1f3;
   --on-background: #191c1a;
   --surface: #fbfdf8;
   --on-surface: #191c1a;
