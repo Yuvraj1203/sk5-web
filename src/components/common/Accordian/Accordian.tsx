@@ -40,7 +40,7 @@ const Accordian = ({
             selectedKey == accordianItem.id
               ? "bg-surface-disabled"
               : "bg-gradient-to-r from-primary to-secondary"
-          }  size-10 rounded-full cursor-pointer`}
+          }  size-10 rounded-full cursor-pointer min-w-10`}
         >
           <FaPlus
             size={18}

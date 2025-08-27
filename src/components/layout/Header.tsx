@@ -6,6 +6,10 @@ import CustomImage from "../common/CustomImage/CustomImage";
 import { usePathname } from "next/navigation";
 import Link from "next/link";
 import { IoIosArrowDown } from "react-icons/io";
+import { useDeviceType } from "@/lib/customHooks/useDeviceType";
+import { TbMenuDeep } from "react-icons/tb";
+import { useSidebar } from "@/context/SidebarContext";
+import Sidebar from "./Sidebar";
 
 type subListType = {
   label: string;
@@ -30,23 +34,23 @@ const navbarList = [
     label: "Service",
     icon: "",
     href: "/service",
-    subList: [
-      {
-        label: "Career",
-        icon: "",
-        href: "/career",
-      },
-      {
-        label: "About Us",
-        icon: "",
-        href: "/about-us",
-      },
-      {
-        label: "Contact Us",
-        icon: "",
-        href: "/contact-us",
-      },
-    ],
+    // subList: [
+    //   {
+    //     label: "Career",
+    //     icon: "",
+    //     href: "/career",
+    //   },
+    //   {
+    //     label: "About Us",
+    //     icon: "",
+    //     href: "/about-us",
+    //   },
+    //   {
+    //     label: "Contact Us",
+    //     icon: "",
+    //     href: "/contact-us",
+    //   },
+    // ],
   },
   {
     label: "Career",
@@ -67,6 +71,9 @@ const navbarList = [
 
 const Header = () => {
   const pathname = usePathname();
+  const deviceType = useDeviceType();
+  const { isOpen, toggleSidebar, closeSidebar } = useSidebar();
+
   const [hoverItem, setHoverItem] = useState(-1);
   const [showHeader, setShowHeader] = useState(true);
 
@@ -143,7 +150,7 @@ const Header = () => {
   return (
     <motion.header
       initial={{ y: 0 }}
-      animate={{ y: showHeader ? 0 : -100 }} // 👈 slide up/down
+      animate={{ y: showHeader ? 0 : -100 }}
       transition={{ duration: 0.3 }}
       className="shadow sticky top-0 bg-background z-50"
     >
@@ -151,9 +158,19 @@ const Header = () => {
         <div className="">
           <CustomImage src={Images.appLogo} width={64} height={64} alt="logo" />
         </div>
-        <nav className="flex items-center gap-2.5">
-          {navbarList.map((item, index) => renderNavbarItem(item, index))}
-        </nav>
+        {deviceType == "mobile" ? (
+          <Sidebar
+            sidebarTrigger={
+              <span className="cursor-pointer">
+                <TbMenuDeep size={25} />
+              </span>
+            }
+          />
+        ) : (
+          <nav className="flex max-md:hidden items-center gap-2.5">
+            {navbarList.map((item, index) => renderNavbarItem(item, index))}
+          </nav>
+        )}
       </div>
     </motion.header>
   );
