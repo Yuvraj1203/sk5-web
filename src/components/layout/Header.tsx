@@ -152,7 +152,7 @@ const Header = () => {
       initial={{ y: 0 }}
       animate={{ y: showHeader ? 0 : -100 }}
       transition={{ duration: 0.3 }}
-      className="shadow sticky top-0 bg-background z-50"
+      className="shadow sticky top-0 bg-white z-50"
     >
       <div className="flex items-center justify-between max-w-[1100px] mx-auto px-4 py-1.5 md:py-2.5 ">
         <div className="">
