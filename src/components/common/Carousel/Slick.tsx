@@ -1,5 +1,5 @@
 "use client";
-import React, { useRef, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import Slider from "react-slick";
@@ -76,6 +76,18 @@ const testimonialData = [
 const Slick = () => {
   const sliderRef = useRef<Slider | null>(null);
   const [slideIndex, setSlideIndex] = useState(0);
+  const [isMobile, setIsMobile] = useState(false);
+
+  useEffect(() => {
+    const checkDevice = () => {
+      setIsMobile(window.innerWidth <= 768);
+    };
+
+    checkDevice(); // initial check
+    window.addEventListener("resize", checkDevice);
+
+    return () => window.removeEventListener("resize", checkDevice);
+  }, []);
 
   const next = () => {
     sliderRef.current?.slickNext();
@@ -84,26 +96,37 @@ const Slick = () => {
     sliderRef.current?.slickPrev();
   };
 
-  let settings = {
-    dots: false,
-    infinite: true,
-    centerMode: true,
-    speed: 500,
-    autoplay: true,
-    autoplaySpeed: 3000,
-    pauseOnHover: true,
-    beforeChange: (current: number, next: number) => setSlideIndex(next),
-    slidesToShow: 3,
-    slidesToScroll: 1,
-    responsive: [
-      {
-        breakpoint: 768, // Mobile breakpoint
-        settings: {
-          slidesToShow: 2, // On mobile
-        },
-      },
-    ],
-  };
+  const [settings, setSettings] = useState({});
+  useEffect(() => {
+    if (isMobile) {
+      setSettings({
+        dots: false,
+        infinite: true,
+        centerMode: true,
+        speed: 500,
+        autoplay: true,
+        autoplaySpeed: 3000,
+        pauseOnHover: true,
+        beforeChange: (current: number, next: number) => setSlideIndex(next),
+        slidesToShow: 1,
+        slidesToScroll: 1,
+      });
+    } else {
+      setSettings({
+        dots: false,
+        infinite: true,
+        centerMode: true,
+        speed: 500,
+        autoplay: true,
+        autoplaySpeed: 3000,
+        pauseOnHover: true,
+        beforeChange: (current: number, next: number) => setSlideIndex(next),
+        slidesToShow: 3,
+        slidesToScroll: 1,
+      });
+    }
+  }, [isMobile]);
+
   return (
     <>
       <Slider ref={sliderRef} {...settings} className="mt-20 md:mt-32">

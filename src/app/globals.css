@@ -13,35 +13,34 @@
   --on-primary-container: #001f26;
 
   /* yellowiesh  */
-/* --secondary: #3a7f72;
+  /* --secondary: #3a7f72;
 --on-secondary: #ffffff;
 --secondary-container: #bcefe2;
 --on-secondary-container: #00201a; */
 
-/* charcol black  */
-/* --secondary: #1a1a1a;
+  /* charcol black  */
+  /* --secondary: #1a1a1a;
 --on-secondary: #ffffff;
 --secondary-container: #333333;
 --on-secondary-container: #f2f2f2; */
 
-/* Black-Blue Accent */
---secondary: #0d1b2a;
---on-secondary: #ffffff;
---secondary-container: #243447;
---on-secondary-container: #e6f0ff;
+  /* Black-Blue Accent */
+  --secondary: #0d1b2a;
+  --on-secondary: #ffffff;
+  --secondary-container: #243447;
+  --on-secondary-container: #e6f0ff;
 
-/* Slate Black  */
-/* --secondary: #212121;
+  /* Slate Black  */
+  /* --secondary: #212121;
 --on-secondary: #ffffff;
 --secondary-container: #3a3a3a;
 --on-secondary-container: #fafafa; */
 
-/* Teal-Black Fusion  */
-/* --secondary: #002b33;
+  /* Teal-Black Fusion  */
+  /* --secondary: #002b33;
 --on-secondary: #ffffff;
 --secondary-container: #01444f;
 --on-secondary-container: #e0f7fa; */
-
 
   --tertiary: #3c6472;
   --on-tertiary: #ffffff;
