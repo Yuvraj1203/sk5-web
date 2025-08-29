@@ -42,6 +42,10 @@
 --secondary-container: #01444f;
 --on-secondary-container: #e0f7fa; */
 
+--theme-bg:#ebf1f3;
+--on-theme-bg:#272b2c;
+
+
   --tertiary: #3c6472;
   --on-tertiary: #ffffff;
   --tertiary-container: #c0e9fa;
@@ -50,8 +54,8 @@
   --on-error: #ffffff;
   --error-container: #ffdad6;
   --on-error-container: #410002;
-  --background: #ebf1f3;
-  --on-background: #191c1a;
+  --background: #ffffff;
+  --on-background: #000000;
   --surface: #e4e4e4;
   --on-surface: #191c1a;
   --surface-variant: #e8ebe8;
@@ -112,6 +116,8 @@
   --color-on-tertiary: var(--on-tertiary);
   --color-tertiary-container: var(--tertiary-container);
   --color-on-tertiary-container: var(--on-tertiary-container);
+    --color-theme-bg: var(--theme-bg);
+  --color-on-theme-bg: var(--on-theme-bg);
   --color-error: var(--error);
   --color-on-error: var(--on-error);
   --color-error-container: var(--error-container);

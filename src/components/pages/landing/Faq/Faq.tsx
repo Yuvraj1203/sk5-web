@@ -49,8 +49,8 @@ export type FaqDataModel = (typeof faqData)[number];
 
 const Faq = () => {
   return (
-    <Section containerStyle="bg-on-primary">
-      <SectionHeading className="text-center">
+    <Section containerStyle="bg-background">
+      <SectionHeading className="text-on-background text-center">
         {"Frequently Asked Questions"}
       </SectionHeading>
       <FaqAccordian accordianData={faqData} />

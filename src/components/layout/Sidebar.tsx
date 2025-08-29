@@ -91,12 +91,12 @@ function Sidebar({ sidebarTrigger }: SidebarProps) {
       closeFloating={"hidden"}
       children={(onClose) => (
         <>
-          <nav className="flex flex-col bg-on-primary w-full p-3 rounded-2xl">
+          <nav className="flex flex-col bg-background w-full p-3 rounded-2xl">
             {sidebarList.map((item, index) => renderSiderbarItem(item, index))}
           </nav>
           <Button
             onClick={onClose}
-            className={`text-base font-medium bg-on-primary w-full mb-2 rounded-2xl`}
+            className={`text-base font-medium bg-background w-full mb-2 rounded-2xl`}
           >
             {"Close"}
           </Button>

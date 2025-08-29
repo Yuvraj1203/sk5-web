@@ -140,7 +140,7 @@ const Slick = () => {
                     ? "grayscale-0 opacity-100"
                     : "grayscale-100 opacity-60"
                 } 
-               relative flex flex-col shadow-faq-out-shadow pt-20 rounded-3xl bg-on-primary`}
+               relative flex flex-col shadow-faq-out-shadow pt-20 rounded-3xl bg-background`}
             >
               <CustomImage
                 src={item.picture}
@@ -161,7 +161,7 @@ const Slick = () => {
                 </p>
               </div>
               <div
-                className="flex flex-col relative gap-1 text-on-primary bg-gradient-to-r from-primary to-secondary py-3 px-4 text-center rounded-b-3xl"
+                className="flex flex-col relative gap-1 text-background bg-gradient-to-r from-primary to-secondary py-3 px-4 text-center rounded-b-3xl"
                 // data-swiper-parallax="-100"
               >
                 <p className="text-xl font-semibold">{item.author}</p>
@@ -178,13 +178,13 @@ const Slick = () => {
       <div className="flex items-center justify-center gap-4 pt-11">
         <button
           onClick={previous}
-          className="custom-prev flex items-center justify-center size-12 rounded-full bg-on-primary shadow-faq-out-shadow cursor-pointer"
+          className="custom-prev flex items-center justify-center size-12 rounded-full bg-background shadow-faq-out-shadow cursor-pointer"
         >
           <IoChevronBackOutline className="font-bold text-primary" size={20} />
         </button>
         <button
           onClick={next}
-          className="custom-next flex items-center justify-center size-12 rounded-full bg-on-primary shadow-faq-out-shadow cursor-pointer"
+          className="custom-next flex items-center justify-center size-12 rounded-full bg-background shadow-faq-out-shadow cursor-pointer"
         >
           <IoChevronForwardOutline
             className="font-bold text-primary"

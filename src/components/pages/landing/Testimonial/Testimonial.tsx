@@ -4,7 +4,7 @@ import React from "react";
 const Testimonial = () => {
   return (
     <section
-      className={`py-8 md:py-14 xl:py-24 overflow-hidden w-full max-w-full`}
+      className={`py-8 md:py-14 xl:py-24 overflow-hidden w-full max-w-full bg-theme-bg`}
     >
       <SectionHeading className="text-center text-primary">
         Reviews of SK5

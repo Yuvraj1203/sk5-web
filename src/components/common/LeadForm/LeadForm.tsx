@@ -21,7 +21,7 @@ const LeadForm = () => {
         size={"sm"}
         classNames={{
           inputWrapper:
-            "bg-on-primary data-[hover=true]:bg-on-primary group-data-[focus=true]:bg-on-primary !shadow-lightShadow",
+            "bg-background data-[hover=true]:bg-background group-data-[focus=true]:bg-background !shadow-lightShadow",
         }}
         errorMessage="Please enter a valid email"
         label="Name"
@@ -33,7 +33,7 @@ const LeadForm = () => {
         size={"sm"}
         classNames={{
           inputWrapper:
-            "bg-on-primary data-[hover=true]:bg-on-primary group-data-[focus=true]:bg-on-primary !shadow-lightShadow",
+            "bg-background data-[hover=true]:bg-background group-data-[focus=true]:bg-background !shadow-lightShadow",
         }}
         errorMessage="Please enter a valid email"
         label="Email"

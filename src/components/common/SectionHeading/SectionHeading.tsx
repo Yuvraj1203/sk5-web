@@ -12,7 +12,7 @@ const SectionHeading = ({ children, className }: SectionHeadingProps) => {
       // whileInView={{ opacity: 1, y: 0 }}
       // transition={{ duration: 0.6 }}
       // viewport={{ once: true, amount: 0.3 }}
-      className={` text-2xl md:text-3xl xl:text-5xl mb-4 font-semibold ${className}`}
+      className={`${className} text-2xl md:text-3xl xl:text-5xl mb-4 font-semibold leading-[1.2]`}
     >
       {children}
     </h2>

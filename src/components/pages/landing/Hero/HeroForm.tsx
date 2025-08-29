@@ -3,7 +3,7 @@ import React from "react";
 
 const HeroForm = () => {
   return (
-    <div className="flex flex-col items-center gap-4 text-center bg-on-primary py-7 px-6 rounded-xl">
+    <div className="flex flex-col items-center gap-4 text-center bg-background py-7 px-6 rounded-xl">
       <p className="text-xl md:text-[28px] font-semibold">
         {"How can we help?"}
       </p>

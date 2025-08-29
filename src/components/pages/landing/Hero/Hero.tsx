@@ -20,11 +20,11 @@ const Hero = () => {
       className="flex max-md:flex-col md:items-center gap-5 md:gap-10"
     >
       {/* left div  */}
-      <div className="md:min-w-[52%] flex flex-col gap-2 md:gap-4 text-on-primary text-left">
+      <div className="md:min-w-[52%] flex flex-col gap-2 md:gap-4 text-white text-left">
         <p className="text-xl lg:text-2xl">
           {"Responsive. Fair. Transparent. Friendly."}
         </p>
-        <SectionHeading className="max-md:text-3xl text-on-primary leading-[1.2] mb-0">
+        <SectionHeading className="max-md:text-3xl text-white leading-[1.2] mb-0">
           {"IT Support, Security and Managed Services"}
         </SectionHeading>
         <p className="text-base md:text-xl xl:text-[26px] w-fit py-2 px-5 md:px-7.5 bg-primary">
@@ -35,10 +35,7 @@ const Hero = () => {
           {heroList.map((item, index) => (
             <div key={index} className="flex items-start gap-3">
               <span className="flex items-center justify-center mt-0.75 bg-primary rounded-full min-h-5.5 min-w-5.5">
-                <IoIosArrowForward
-                  size={14}
-                  className="text-on-primary ml-0.5"
-                />
+                <IoIosArrowForward size={14} className="text-white ml-0.5" />
               </span>
               <p
                 className="text-base md:text-lg xl:text-xl"
