@@ -48,8 +48,9 @@ const CustomModal = ({
   return (
     <>
       {cloneElement(trigger, {
-        onClick: onOpen, // 👈 works for span/div
-        onPress: onOpen, // 👈 works for HeroUI Button
+        ...(trigger.type === Button
+          ? { onPress: onOpen }
+          : { onClick: onOpen }),
       })}
       <Modal
         isOpen={isOpen}

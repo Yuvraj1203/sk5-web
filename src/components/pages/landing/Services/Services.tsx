@@ -28,6 +28,7 @@ const serviceData = [
 const Services = () => {
   return (
     <Section
+      id={"service"}
       containerStyle="bg-background"
       className="flex flex-col gap-1 md:gap-4 text-center"
     >

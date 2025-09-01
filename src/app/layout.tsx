@@ -26,7 +26,7 @@ export default function RootLayout({
       <body className={` ${poppins.variable} scroll-smooth antialiased`}>
         <Providers>
           <Header />
-          {children}
+          <main className="grow flex flex-col">{children}</main>
           <Footer />
         </Providers>
       </body>

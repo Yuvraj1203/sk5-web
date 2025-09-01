@@ -8,7 +8,7 @@ import Link from "next/link";
 import { IoIosArrowDown } from "react-icons/io";
 import { useDeviceType } from "@/lib/customHooks/useDeviceType";
 import { TbMenuDeep } from "react-icons/tb";
-import { useSidebar } from "@/context/SidebarContext";
+// import { useSidebar } from "@/context/SidebarContext";
 import Sidebar from "./Sidebar";
 
 type subListType = {
@@ -28,12 +28,12 @@ const navbarList = [
   {
     label: "Home",
     icon: "",
-    href: "/Home",
+    href: "/",
   },
   {
     label: "Service",
     icon: "",
-    href: "/service",
+    href: "/#service",
     // subList: [
     //   {
     //     label: "Career",
@@ -52,27 +52,27 @@ const navbarList = [
     //   },
     // ],
   },
-  {
-    label: "Career",
-    icon: "",
-    href: "/career",
-  },
+  // {
+  //   label: "Career",
+  //   icon: "",
+  //   href: "/career",
+  // },
   {
     label: "About Us",
     icon: "",
-    href: "/about-us",
+    href: "/about",
   },
   {
     label: "Contact Us",
     icon: "",
-    href: "/contact-us",
+    href: "/contact",
   },
 ];
 
 const Header = () => {
   const pathname = usePathname();
   const deviceType = useDeviceType();
-  const { isOpen, toggleSidebar, closeSidebar } = useSidebar();
+  // const { isOpen, toggleSidebar, closeSidebar } = useSidebar();
 
   const [hoverItem, setHoverItem] = useState(-1);
   const [showHeader, setShowHeader] = useState(true);
@@ -165,6 +165,7 @@ const Header = () => {
                 <TbMenuDeep size={25} />
               </span>
             }
+            navbarList={navbarList}
           />
         ) : (
           <nav className="flex max-md:hidden items-center gap-2.5">
