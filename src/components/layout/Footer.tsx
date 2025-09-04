@@ -25,7 +25,7 @@ const Footer = () => {
     <footer className="py-10 px-10 bg-secondary">
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 max-w-[1100px] mx-auto max-md:gap-8">
         {/* logo div  */}
-        <div className="flex flex-col px-5 md:px-12 items-center justify-between gap-5 md:gap-10 md:border-r-1 border-secondary-container">
+        <div className="flex flex-col px-5 md:px-12 items-center justify-between gap-5 md:gap-10 lg:border-r-1 border-secondary-container">
           <CustomImage src={Images.appLogo} width={64} height={64} alt="logo" />
           <CustomButton className={"uppercase rounded-full font-medium"}>
             Schedule A Call
@@ -33,7 +33,7 @@ const Footer = () => {
         </div>
 
         {/* company div  */}
-        <div className="flex flex-col items-center justify-between px-5 md:px-12 gap-5 md:gap-10 md:border-r-1 border-secondary-container text-on-secondary">
+        <div className="flex flex-col items-center justify-between px-5 md:px-12 gap-5 md:gap-10 lg:border-r-1 border-secondary-container text-on-secondary">
           <h3 className="">Company</h3>
           <nav className="flex flex-col items-center gap-2 ">
             {nav.map((item, index) => {
@@ -43,7 +43,7 @@ const Footer = () => {
         </div>
 
         {/* resource div  */}
-        <div className="flex flex-col items-center justify-between px-5 md:px-12 gap-5 md:gap-10 md:border-r-1 border-secondary-container text-on-secondary">
+        <div className="flex flex-col items-center justify-between px-5 md:px-12 gap-5 md:gap-10 lg:border-r-1 border-secondary-container text-on-secondary">
           <h3 className="">Resources</h3>
           <nav className="flex flex-col items-center gap-2 ">
             {resources.map((item, index) => {
