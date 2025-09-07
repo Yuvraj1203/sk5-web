@@ -28,7 +28,7 @@ const PreFooter = () => {
         <SectionSubHeading className="">
           Let's write the next chapter of your success story together.
         </SectionSubHeading>
-        <ScheduleButton className="text-sm md:text-xl font-semibold px-6 py-4 md:px-12 md:py-8 w-fit rounded-full uppercase bg-on-background text-background hover:bg-background hover:text-on-background shadow-sm duration-250" />
+        <ScheduleButton buttonStyle="text-sm md:text-xl font-semibold px-6 py-4 md:px-12 md:py-8 w-fit rounded-full uppercase bg-on-background text-background hover:bg-background hover:text-on-background shadow-sm duration-250" />
       </div>
     </Section>
   );

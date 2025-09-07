@@ -1,17 +1,28 @@
 "use client";
 import { Button } from "@heroui/react";
 import React from "react";
+import CustomModal, { BackdropEnum } from "../CustomModal/CustomModal";
+import { HeroForm } from "@/components/pages";
 
 type ScheduleButtonProps = {
-  content?: string;
-  className?: string;
+  buttonContent?: string;
+  buttonStyle?: string;
 };
 
 const ScheduleButton = ({
-  content = "Schedule A Call",
-  className,
+  buttonContent = "Schedule A Call",
+  buttonStyle,
 }: ScheduleButtonProps) => {
-  return <Button className={`${className}`}>{content}</Button>;
+  return (
+    <CustomModal
+      closeButton={false}
+      wrapperStyle="bg-transparent px-4 shadow-none"
+      contentWrapperStyle="p-0"
+      backdrop={BackdropEnum.blur}
+      children={(onClose) => <HeroForm />}
+      trigger={<Button className={`${buttonStyle}`}>{buttonContent}</Button>}
+    />
+  );
 };
 
 export default ScheduleButton;

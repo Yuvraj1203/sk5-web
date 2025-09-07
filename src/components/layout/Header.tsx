@@ -10,6 +10,7 @@ import { useDeviceType } from "@/lib/customHooks/useDeviceType";
 import { TbMenuDeep } from "react-icons/tb";
 // import { useSidebar } from "@/context/SidebarContext";
 import Sidebar from "./Sidebar";
+import { ScheduleButton } from "../common";
 
 type subListType = {
   label: string;
@@ -154,7 +155,7 @@ const Header = () => {
       transition={{ duration: 0.3 }}
       className="shadow sticky top-0 bg-background z-50"
     >
-      <div className="flex items-center justify-between max-w-[1100px] mx-auto px-4 py-1.5 md:py-2.5 ">
+      <div className="flex items-center justify-between max-w-[1250px] mx-auto px-4 py-1.5 md:py-2.5 ">
         <div className="">
           <CustomImage src={Images.appLogo} width={64} height={64} alt="logo" />
         </div>
@@ -168,9 +169,16 @@ const Header = () => {
             navbarList={navbarList}
           />
         ) : (
-          <nav className="flex max-md:hidden items-center gap-2.5">
-            {navbarList.map((item, index) => renderNavbarItem(item, index))}
-          </nav>
+          <div className="flex max-md:hidden items-center gap-2.5">
+            <nav className="flex items-center gap-2.5">
+              {navbarList.map((item, index) => renderNavbarItem(item, index))}
+            </nav>
+            <ScheduleButton
+              buttonStyle={
+                "uppercase rounded-full font-medium bg-gradient-to-br from-primary to-secondary-container text-on-secondary"
+              }
+            />
+          </div>
         )}
       </div>
     </motion.header>

@@ -5,15 +5,19 @@ import CustomButton from "../common/CustomButton/CustomButton";
 import CustomImage from "../common/CustomImage/CustomImage";
 import { Images } from "@/public";
 import { FaFacebookF, FaInstagram, FaLinkedinIn } from "react-icons/fa";
+import Link from "next/link";
+import { ScheduleButton } from "../common";
 
 const nav = [
-  { label: "About Us", href: "/" },
-  { label: "Services", href: "/" },
-  { label: "Contact", href: "/" },
-  { label: "Career", href: "/" },
+  { label: "About Us", href: "/about" },
+  { label: "Services", href: "/#service" },
+  { label: "Contact", href: "/contact" },
+  // { label: "Career", href: "/" },
 ];
 
-const resources = [
+type NavType = typeof nav;
+
+const resources: NavType = [
   { label: "Blog", href: "/" },
   { label: "Free Masterclass", href: "/" },
   { label: "Free Live Training", href: "/" },
@@ -27,30 +31,46 @@ const Footer = () => {
         {/* logo div  */}
         <div className="flex flex-col px-5 md:px-12 items-center justify-between gap-5 md:gap-10 lg:border-r-1 border-secondary-container">
           <CustomImage src={Images.appLogo} width={64} height={64} alt="logo" />
-          <CustomButton className={"uppercase rounded-full font-medium"}>
-            Schedule A Call
-          </CustomButton>
+          <ScheduleButton
+            buttonStyle={
+              "uppercase rounded-full font-medium bg-gradient-to-br from-primary to-secondary-container text-on-secondary"
+            }
+          />
         </div>
 
         {/* company div  */}
-        <div className="flex flex-col items-center justify-between px-5 md:px-12 gap-5 md:gap-10 lg:border-r-1 border-secondary-container text-on-secondary">
+        <div
+          className={`${
+            resources.length > 0 ? "col-span-1" : "md:col-span-2"
+          } flex flex-col items-center justify-between px-5 md:px-12 gap-5 md:gap-10 lg:border-r-1 border-secondary-container text-on-secondary`}
+        >
           <h3 className="">Company</h3>
           <nav className="flex flex-col items-center gap-2 ">
             {nav.map((item, index) => {
-              return <span key={index}>{item.label}</span>;
+              return (
+                <Link href={item.href} key={index}>
+                  {item.label}
+                </Link>
+              );
             })}
           </nav>
         </div>
 
         {/* resource div  */}
-        <div className="flex flex-col items-center justify-between px-5 md:px-12 gap-5 md:gap-10 lg:border-r-1 border-secondary-container text-on-secondary">
-          <h3 className="">Resources</h3>
-          <nav className="flex flex-col items-center gap-2 ">
-            {resources.map((item, index) => {
-              return <span key={index}>{item.label}</span>;
-            })}
-          </nav>
-        </div>
+        {resources.length > 0 && (
+          <div className="flex flex-col items-center justify-between px-5 md:px-12 gap-5 md:gap-10 lg:border-r-1 border-secondary-container text-on-secondary">
+            <h3 className="">Resources</h3>
+            <nav className="flex flex-col items-center gap-2 ">
+              {resources.map((item, index) => {
+                return (
+                  <Link href={item.href} key={index}>
+                    {item.label}
+                  </Link>
+                );
+              })}
+            </nav>
+          </div>
+        )}
 
         {/* social div  */}
         <div className="flex flex-col items-center justify-between px-5 md:px-12 gap-5 md:gap-10 text-on-secondary">
