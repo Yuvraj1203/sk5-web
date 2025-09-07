@@ -32,7 +32,7 @@ function Sidebar({ sidebarTrigger, navbarList }: SidebarProps) {
         key={index}
         href={item.href}
         onClick={onClose}
-        className={`${isActive ? " text-primary py-4" : " text-textColor"} ${
+        className={`${isActive ? " text-primary" : " text-textColor"} ${
           navbarList.length - 1 == index ? "" : "border-b-1 border-surface"
         } flex items-center text-base gap-4 font-medium py-2.5 px-4 cursor-pointer duration-400`}
       >
@@ -45,18 +45,19 @@ function Sidebar({ sidebarTrigger, navbarList }: SidebarProps) {
   return (
     <CustomModal
       closeButton={false}
-      wrapperStyle="bg-transparent shadow-none mx-2"
+      wrapperStyle="bg-transparent shadow-none mx-2.5"
       contentWrapperStyle="p-0 "
       backdrop={BackdropEnum.blur}
       closeFloating={"hidden"}
       children={(onClose) => (
         <>
-          <nav className="flex flex-col bg-background w-full p-3 rounded-2xl">
+          <nav className="flex flex-col bg-background w-full rounded-2xl">
             {navbarList.map((item, index) =>
               renderSiderbarItem(item, index, onClose)
             )}
           </nav>
           <ScheduleButton
+            content=""
             buttonStyle={
               "uppercase text-base font-medium bg-gradient-to-br from-primary to-secondary-container text-on-secondary w-full mb-2 rounded-2xl"
             }

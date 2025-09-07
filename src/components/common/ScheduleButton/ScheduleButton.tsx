@@ -7,11 +7,13 @@ import { HeroForm } from "@/components/pages";
 type ScheduleButtonProps = {
   buttonContent?: string;
   buttonStyle?: string;
+  content?: string;
 };
 
 const ScheduleButton = ({
   buttonContent = "Schedule A Call",
   buttonStyle,
+  content,
 }: ScheduleButtonProps) => {
   return (
     <CustomModal
@@ -20,7 +22,7 @@ const ScheduleButton = ({
       closeFloating="md:-right-6"
       contentWrapperStyle="p-0"
       backdrop={BackdropEnum.blur}
-      children={(onClose) => <HeroForm onClose={onClose} />}
+      children={(onClose) => <HeroForm content={content} onClose={onClose} />}
       trigger={<Button className={`${buttonStyle}`}>{buttonContent}</Button>}
     />
   );
