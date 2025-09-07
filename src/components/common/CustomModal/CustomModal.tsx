@@ -56,7 +56,7 @@ const CustomModal = ({
         isOpen={isOpen}
         onOpenChange={onOpenChange}
         classNames={{
-          closeButton: `right-3 -top-10 md:-right-4 md:-top-4 bg-background shadow-fullShadow cursor-pointer ${closeFloating}`,
+          closeButton: `${closeFloating} -top-10 md:-right-4 md:-top-4 bg-background shadow-fullShadow cursor-pointer `,
           base: `overflow-visible ${wrapperStyle}`,
           body: `${contentWrapperStyle}`,
         }}

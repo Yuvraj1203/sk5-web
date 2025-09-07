@@ -16,10 +16,11 @@ const ScheduleButton = ({
   return (
     <CustomModal
       closeButton={false}
-      wrapperStyle="bg-transparent px-4 shadow-none"
+      wrapperStyle=""
+      closeFloating="md:-right-6"
       contentWrapperStyle="p-0"
       backdrop={BackdropEnum.blur}
-      children={(onClose) => <HeroForm />}
+      children={(onClose) => <HeroForm onClose={onClose} />}
       trigger={<Button className={`${buttonStyle}`}>{buttonContent}</Button>}
     />
   );

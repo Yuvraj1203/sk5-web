@@ -2,7 +2,7 @@
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import React, { ReactElement, useEffect, useRef } from "react";
-import { CustomModal } from "../common";
+import { CustomModal, ScheduleButton } from "../common";
 import { BackdropEnum } from "../common/CustomModal/CustomModal";
 import { Button } from "@heroui/react";
 
@@ -36,7 +36,7 @@ function Sidebar({ sidebarTrigger, navbarList }: SidebarProps) {
           navbarList.length - 1 == index ? "" : "border-b-1 border-surface"
         } flex items-center text-base gap-4 font-medium py-2.5 px-4 cursor-pointer duration-400`}
       >
-        <span>{item.icon}</span>
+        {item.icon && <span>{item.icon}</span>}
         <span className="text-nowrap">{item.label}</span>
       </Link>
     );
@@ -56,12 +56,11 @@ function Sidebar({ sidebarTrigger, navbarList }: SidebarProps) {
               renderSiderbarItem(item, index, onClose)
             )}
           </nav>
-          <Button
-            onClick={onClose}
-            className={`text-base font-medium bg-background w-full mb-2 rounded-2xl`}
-          >
-            {"Close"}
-          </Button>
+          <ScheduleButton
+            buttonStyle={
+              "uppercase text-base font-medium bg-gradient-to-br from-primary to-secondary-container text-on-secondary w-full mb-2 rounded-2xl"
+            }
+          />
         </>
       )}
       trigger={sidebarTrigger}
