@@ -5,43 +5,23 @@ import FaqAccordian from "./FaqAccordian";
 const faqData = [
   {
     id: 1,
-    title: "What makes your services different?",
-    desc: "We focus on providing customized solutions tailored to your business needs, rather than offering a one-size-fits-all approach.",
+    title: "How is SK5 Marketing different from traditional agencies?",
+    desc: "Unlike agencies that charge upfront retainers, we work on a performance-first model with zero upfront costs. You only pay when our efforts directly generate sales for your HVAC business",
   },
   {
     id: 2,
-    title: "How long does it take to get started?",
-    desc: "Most clients get started within 24–48 hours. Once we understand your requirements, our team quickly sets up everything to kick off the process.",
+    title: "Do I need to invest in ads separately?",
+    desc: "Yes — for the best results, set aside a dedicated ad budget for platforms like Google and Meta etc. This ensures that 100% of your advertising spend goes directly toward reaching HVAC customers. We handle all strategy, setup, and optimization at no extra cost. You pay the ad networks, and we take care of the rest — no hidden fees, just more leads for your business.",
   },
   {
     id: 3,
-    title: "Do you provide ongoing support?",
-    desc: "Yes! We offer continuous support and maintenance to ensure smooth performance and address any issues that may arise.",
+    title: "What does “exclusive territory” mean for me?",
+    desc: "It means we partner with only one HVAC company per region. Once you’re our client, we won’t work with your competitors in the same area.",
   },
   {
     id: 4,
-    title: "Is there a free trial or demo available?",
-    desc: "Absolutely. We provide a free demo to help you explore our features before making any commitments.",
-  },
-  {
-    id: 5,
-    title: "What type of businesses do you work with?",
-    desc: "We work with startups, small businesses, and enterprises across multiple industries, including e-commerce, finance, healthcare, and technology.",
-  },
-  {
-    id: 6,
-    title: "How secure is my data with you?",
-    desc: "Your data security is our top priority. We follow industry-standard encryption protocols and comply with all major security regulations.",
-  },
-  {
-    id: 7,
-    title: "Can I customize the solution to match my brand?",
-    desc: "Yes, our solutions are fully customizable — from design elements to feature sets, ensuring they align perfectly with your brand identity.",
-  },
-  {
-    id: 8,
-    title: "What are your pricing options?",
-    desc: "We offer flexible pricing plans based on your needs — from monthly subscriptions to enterprise-level packages. Contact us for a tailored quote.",
+    title: "Can you help if my HVAC business is new or has no online presence?",
+    desc: "Absolutely. We help you build everything from the ground up—your website, social media, SEO, and Google My Business optimization etc—along with lead generation and appointment booking. This creates a complete growth engine to help you start attracting customers right away.",
   },
 ];
 

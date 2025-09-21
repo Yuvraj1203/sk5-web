@@ -102,6 +102,30 @@ const LeadForm = ({ onClose }: LeadFormProps) => {
             name="email"
             type="email"
           />
+          <Input
+            isRequired={true}
+            variant={"flat"}
+            size={"sm"}
+            classNames={{
+              inputWrapper:
+                "bg-background data-[hover=true]:bg-background group-data-[focus=true]:bg-background !shadow-lightShadow",
+            }}
+            label="Location"
+            name="location"
+            type="location"
+          />
+          <Input
+            isRequired={true}
+            variant={"flat"}
+            size={"sm"}
+            classNames={{
+              inputWrapper:
+                "bg-background data-[hover=true]:bg-background group-data-[focus=true]:bg-background !shadow-lightShadow",
+            }}
+            label="Message"
+            name="message"
+            type="message"
+          />
           {error && <p className="text-error text-xs md:text-sm">{error}</p>}
           <Button
             type="submit"

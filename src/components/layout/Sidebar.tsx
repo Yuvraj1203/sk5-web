@@ -1,15 +1,23 @@
 "use client";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import React, { ReactElement, useEffect, useRef } from "react";
+import React, { ReactElement, useEffect, useRef, useState } from "react";
 import { CustomModal, ScheduleButton } from "../common";
 import { BackdropEnum } from "../common/CustomModal/CustomModal";
 import { Button } from "@heroui/react";
+import { IoIosArrowDown } from "react-icons/io";
+
+type SubListType = {
+  label: string;
+  icon: any;
+  href: string;
+};
 
 type SidebarListType = {
   label: string;
   icon: any;
   href: string;
+  subList?: SubListType[];
 };
 
 type SidebarProps<T extends object = any> = {
@@ -19,6 +27,7 @@ type SidebarProps<T extends object = any> = {
 
 function Sidebar({ sidebarTrigger, navbarList }: SidebarProps) {
   const pathname = usePathname();
+  const [clickedItem, setClickedItem] = useState(-1);
 
   const renderSiderbarItem = (
     item: SidebarListType,
@@ -31,13 +40,51 @@ function Sidebar({ sidebarTrigger, navbarList }: SidebarProps) {
       <Link
         key={index}
         href={item.href}
-        onClick={onClose}
+        onClick={() => {
+          if (item.subList?.length! > 0) {
+            clickedItem == index ? setClickedItem(-1) : setClickedItem(index);
+          } else {
+            onClose();
+          }
+        }}
         className={`${isActive ? " text-primary" : " text-textColor"} ${
           navbarList.length - 1 == index ? "" : "border-b-1 border-surface"
-        } flex items-center text-base gap-4 font-medium py-2.5 px-4 cursor-pointer duration-400`}
+        } flex flex-col items-center text-base font-medium py-2.5 px-4 cursor-pointer duration-400`}
       >
-        {item.icon && <span>{item.icon}</span>}
-        <span className="text-nowrap">{item.label}</span>
+        <>
+          <div className="w-full flex items-center text-left text-base gap-4 font-medium cursor-pointer duration-400">
+            {item.icon && <span>{item.icon}</span>}
+            <span className="text-nowrap grow">{item.label}</span>
+            {item.subList && (
+              <span>
+                {item.subList?.length! > 0 && (
+                  <IoIosArrowDown
+                    className={`${
+                      clickedItem == index ? "rotate-180" : "rotate-0"
+                    }`}
+                  />
+                )}
+              </span>
+            )}
+          </div>
+          {item.subList?.length! > 0 && (
+            <div
+              className={`w-full px-1.5 grid ${
+                clickedItem == index
+                  ? "grid-rows-[1fr] pt-4"
+                  : "grid-rows-[0fr]"
+              }  duration-400`}
+            >
+              <div className="overflow-hidden flex flex-col gap-1.5 text-sm md:text-base">
+                {item.subList?.map((item, index) => (
+                  <span key={index} className=" w-full text-nowrap grow">
+                    {item.label}
+                  </span>
+                ))}
+              </div>
+            </div>
+          )}
+        </>
       </Link>
     );
   };

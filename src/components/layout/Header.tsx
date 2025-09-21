@@ -34,24 +34,56 @@ const navbarList = [
   {
     label: "Service",
     icon: "",
-    href: "/#service",
-    // subList: [
-    //   {
-    //     label: "Career",
-    //     icon: "",
-    //     href: "/career",
-    //   },
-    //   {
-    //     label: "About Us",
-    //     icon: "",
-    //     href: "/about-us",
-    //   },
-    //   {
-    //     label: "Contact Us",
-    //     icon: "",
-    //     href: "/contact-us",
-    //   },
-    // ],
+    href: "",
+    subList: [
+      {
+        label: "Google and Social media advertising",
+        icon: "",
+        href: "",
+      },
+      {
+        label: "Search engine optimization",
+        icon: "",
+        href: "",
+      },
+      {
+        label: "Social Media Optimization",
+        icon: "",
+        href: "",
+      },
+      {
+        label: "GMB Optimization",
+        icon: "",
+        href: "",
+      },
+      {
+        label: "Appointment Booking",
+        icon: "",
+        href: "",
+      },
+    ],
+  },
+  {
+    label: "Other Services",
+    icon: "",
+    href: "",
+    subList: [
+      {
+        label: "Website Devlopment",
+        icon: "",
+        href: "",
+      },
+      {
+        label: "Rebait",
+        icon: "",
+        href: "",
+      },
+      {
+        label: "Content Markeitng",
+        icon: "",
+        href: "",
+      },
+    ],
   },
   // {
   //   label: "Career",
@@ -100,7 +132,7 @@ const Header = () => {
     return (
       <span
         key={index}
-        className="py-1.5 px-8 text-black hover:text-primary duration-400 text-nowrap cursor-pointer"
+        className="py-1.5 px-4 text-black hover:text-primary duration-400 text-nowrap cursor-pointer"
       >
         {item.label}
       </span>

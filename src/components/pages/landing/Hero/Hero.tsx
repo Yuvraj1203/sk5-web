@@ -21,17 +21,23 @@ const Hero = () => {
     >
       {/* left div  */}
       <div className="md:min-w-[52%] flex flex-col gap-2 md:gap-4 text-white text-left">
-        <p className="text-xl lg:text-2xl">
+        {/* <p className="text-xl lg:text-2xl">
           {"Responsive. Fair. Transparent. Friendly."}
-        </p>
+        </p> */}
         <SectionHeading className="max-md:text-3xl text-white leading-[1.2] mb-0">
-          {"IT Support, Security and Managed Services"}
+          {`No Cost. Risk-Free. \n Growth-Focused.The HVAC Marketing Partner Who Shares Your Risk`}
         </SectionHeading>
-        <p className="text-base md:text-xl xl:text-[26px] w-fit py-2 px-5 md:px-7.5 bg-primary">
+        {/* <p className="text-base md:text-xl xl:text-[26px] w-fit py-2 px-5 md:px-7.5 bg-primary">
           SK5 Business IT Solutions
+        </p> */}
+
+        <p className="text-xl lg:text-2xl">
+          {
+            "With zero upfront costs, SK5 HVAC Marketing guarantees growth, booked appointments, and filled pipelines, delivering long-term success for one company per region."
+          }
         </p>
 
-        <div className="flex flex-col gap-5 mt-2">
+        {/* <div className="flex flex-col gap-5 mt-2">
           {heroList.map((item, index) => (
             <div key={index} className="flex items-start gap-3">
               <span className="flex items-center justify-center mt-0.75 bg-primary rounded-full min-h-5.5 min-w-5.5">
@@ -43,7 +49,7 @@ const Hero = () => {
               ></p>
             </div>
           ))}
-        </div>
+        </div> */}
       </div>
 
       {/* right div  */}

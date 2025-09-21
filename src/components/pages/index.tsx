@@ -5,4 +5,5 @@ export { default as Services } from "./landing/Services/Services";
 export { default as Testimonial } from "./landing/Testimonial/Testimonial";
 export { default as ContactUs } from "./ContactUs/ContactUs";
 export { default as AboutUs } from "./AboutUs/AboutUs";
+export { default as NewAboutUs } from "./AboutUs/NewAboutUs";
 export { default as HeroForm } from "./landing/Hero/HeroForm";
