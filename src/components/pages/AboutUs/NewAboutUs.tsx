@@ -7,17 +7,17 @@ import React from "react";
 
 const approach = [
   {
-    title: "Performance-Based: ",
+    title: "Performance-Based :  ",
     content:
       "We align our success with yours. SK5 focuses on delivering measurable results and ROI. You only pay for performance, so our team is fully invested in helping you grow.",
   },
   {
-    title: "Strong Relationships: ",
+    title: "Strong Relationships :  ",
     content:
       "We believe in long-term partnerships. Our team communicates openly and works closely with you every step of the way, building trust and understanding. Your goals become our goals, and we adapt strategies together.",
   },
   {
-    title: "Exclusive Regions: ",
+    title: "Exclusive Regions :  ",
     content:
       "We grant exclusive marketing territories to each client. That means your leads are yours alone – we won’t pump multiple HVAC companies into the same area. This approach protects your market and ensures you get genuine local opportunities.",
   },
@@ -25,27 +25,27 @@ const approach = [
 
 const values = [
   {
-    title: "Trust: ",
+    title: "Trust :  ",
     content:
       "We build confidence through honesty and reliability. You can count on us to keep our promises, handle your marketing with integrity, and always act in your best interest.",
   },
   {
-    title: "Relationships: ",
+    title: "Relationships :  ",
     content:
       "People come first. We nurture strong, lasting partnerships by listening to your needs, communicating transparently, and treating your business as if it were our own.",
   },
   {
-    title: "Transparency: ",
+    title: "Transparency :  ",
     content:
       "Clear communication is key. We keep you informed with straightforward reporting and honest feedback. You’ll always know what we’re doing, why we’re doing it, and how it’s working.",
   },
   {
-    title: "Expertise: ",
+    title: "Expertise :  ",
     content:
       "Decades of industry experience set us apart. Our team knows HVAC and marketing inside-out. We apply that knowledge to create strategies that really work, cutting through trial and error to get you results faster.",
   },
   {
-    title: "Innovation: ",
+    title: "Innovation :  ",
     content:
       "We stay ahead of the curve. SK5 uses the latest marketing techniques and technologies to give you an edge. By continually improving and innovating, we make sure your HVAC business benefits from the best, most effective solutions.",
   },
@@ -63,7 +63,7 @@ At SK5, we focus on measurable results that drive your bottom line. We partner c
       <SectionHeading className="text-center">{"Our Approach"}</SectionHeading>
       {approach.map((item, index) => (
         <p key={index} className="text-sm md:text-lg font-medium">
-          <span className="font-semibold">{item.title}</span>
+          <span className="font-semibold text-base md:text-2xl">{item.title}</span>
           {item.content}
         </p>
       ))}
@@ -76,7 +76,7 @@ At SK5, we focus on measurable results that drive your bottom line. We partner c
       </SectionSubHeading>
       {values.map((item, index) => (
         <p key={index} className="text-sm md:text-lg font-medium">
-          <span className="font-semibold">{item.title}</span>
+          <span className="font-semibold text-base md:text-2xl">{item.title}</span>
           {item.content}
         </p>
       ))}

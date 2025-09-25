@@ -151,7 +151,7 @@ const Header = () => {
           onMouseLeave={() => setHoverItem(-1)}
           className={`${
             isActive ? "text-primary py-4" : " text-textColor hover:py-4"
-          } flex items-center gap-4 subTitle font-medium py-2.5 px-4  hover:text-primary rounded-2xl cursor-pointer duration-400`}
+          } flex items-center gap-4 subTitle font-bold py-2.5 px-4  hover:text-primary rounded-2xl cursor-pointer duration-400`}
         >
           <span className="text-nowrap">{item.label}</span>
           {item.subList?.length! > 0 && (
@@ -185,7 +185,7 @@ const Header = () => {
       initial={{ y: 0 }}
       animate={{ y: showHeader ? 0 : -100 }}
       transition={{ duration: 0.3 }}
-      className="shadow sticky top-0 bg-background z-50"
+      className="shadow sticky top-0 bg-offwhite z-50"
     >
       <div className="flex items-center justify-between max-w-[1250px] mx-auto px-4 py-1.5 md:py-2.5 ">
         <div className="">
@@ -207,7 +207,7 @@ const Header = () => {
             </nav>
             <ScheduleButton
               buttonStyle={
-                "uppercase rounded-full font-medium bg-gradient-to-br from-primary to-secondary-container text-on-secondary"
+                "uppercase rounded-full font-bold bg-gradient-to-br from-primary to-secondary-container text-on-secondary"
               }
             />
           </div>

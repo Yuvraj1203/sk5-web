@@ -68,7 +68,7 @@ const ReviewSlick = () => {
 
   return (
     <>
-      <Slider ref={sliderRef} {...settings} className="mt-20 md:mt-32">
+      <Slider ref={sliderRef} {...settings} className="mt-5 md:mt-10">
         {reviewData.map((item, index) => {
           return (
             <div

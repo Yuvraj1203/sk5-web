@@ -18,11 +18,11 @@ const Contact = () => {
           <SectionHeading className="relative z-10">
             {"Contact Us"}
           </SectionHeading>
-          <SectionSubHeading className="relative z-10">
+          {/* <SectionSubHeading className="relative z-10">
             {
               "Contact us today and let us help you build that next great software turning disruption into opportunity."
             }
-          </SectionSubHeading>
+          </SectionSubHeading> */}
         </div>
       </div>
 

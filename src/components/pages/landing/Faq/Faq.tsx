@@ -15,7 +15,7 @@ const faqData = [
   },
   {
     id: 3,
-    title: "What does “exclusive territory” mean for me?",
+    title: "What does “Exclusive Territory” mean for me?",
     desc: "It means we partner with only one HVAC company per region. Once you’re our client, we won’t work with your competitors in the same area.",
   },
   {
@@ -30,7 +30,7 @@ export type FaqDataModel = (typeof faqData)[number];
 const Faq = () => {
   return (
     <Section containerStyle="bg-background">
-      <SectionHeading className="text-on-background text-center">
+      <SectionHeading className="text-transparent bg-clip-text bg-gradient-to-r from-teal to-secondary text-center">
         {"Frequently Asked Questions"}
       </SectionHeading>
       <FaqAccordian accordianData={faqData} />

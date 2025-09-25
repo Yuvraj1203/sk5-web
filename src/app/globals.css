@@ -45,6 +45,7 @@
 --theme-bg:#ebf1f3;
 --on-theme-bg:#272b2c;
 
+--teal:#00d5be;
 
   --tertiary: #3c6472;
   --on-tertiary: #ffffff;
@@ -75,6 +76,9 @@
   --elevation-level3: #dfe7e5;
   --elevation-level4: #dde6e3;
   --elevation-level5: #d8e9df;
+
+  /* offwhite */
+  --offwhite: #F8F8F8;
 
   --surface-disabled: #191c1a1f;
   --on-surface-disabled: #191c1a61;
@@ -112,6 +116,9 @@
   --color-on-secondary: var(--on-secondary);
   --color-secondary-container: var(--secondary-container);
   --color-on-secondary-container: var(--on-secondary-container);
+
+  --color-teal: var(--teal);
+
   --color-tertiary: var(--tertiary);
   --color-on-tertiary: var(--on-tertiary);
   --color-tertiary-container: var(--tertiary-container);
@@ -143,6 +150,9 @@
   --color-elevation-level4: var(--elevation-level4);
   --color-elevation-level5: var(--elevation-level5);
 
+    /* offwhite */
+  --color-offwhite: var(--offwhite);
+
   --color-surface-disabled: var(--surface-disabled);
   --color-on-surface-disabled: var(--on-surface-disabled);
   --color-backdrop: var(--backdrop);
@@ -153,7 +163,7 @@
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --foreground: #ededed;
+    /* --foreground: #ededed;
     --primary: #67dca5;
     --primary-shade: #9bffde;
     --on-primary: #003823;
@@ -183,10 +193,10 @@
     --scrim: #000000;
     --inverse-surface: #e1e3df;
     --inverse-on-surface: #2e312f;
-    --inverse-primary: #006c48;
+    --inverse-primary: #006c48; */
 
     /* Elevation */
-    --elevation-level0: #eef6ef00;
+    /* --elevation-level0: #eef6ef00;
     --elevation-level1: #1d2621;
     --elevation-level2: #1f2b25;
     --elevation-level3: #223129;
@@ -196,14 +206,14 @@
     --surface-disabled: #e1e3df1f;
     --on-surface-disabled: #e1e3df61;
     --backdrop: #2a322d66;
-    --light-primary-container: #85f9c025;
+    --light-primary-container: #85f9c025; */
 
     /* shadow  */
-    --faq-out-shadow: 2px 8px 10px 0px #8aa4961f, -1px -1px 6px 0px #8aa4961f;
+    /* --faq-out-shadow: 2px 8px 10px 0px #8aa4961f, -1px -1px 6px 0px #8aa4961f;
     --faq-inside-shadow: inset 2px 8px 10px 0px #8aa4961f;
     --faq-both-shadow: 2px 8px 10px 0px #8aa4961f,
       inset 2px 8px 10px 0px #8aa4961f;
-    --navbar-shadow: 0px 20px 30px #53585d0d, 0px 0px 30px #53585d1a;
+    --navbar-shadow: 0px 20px 30px #53585d0d, 0px 0px 30px #53585d1a; */
   }
 }
 
@@ -230,4 +240,30 @@ body {
 
 .slick-slide {
   padding: 0 15px; /* half-gap left & right */
+}
+
+
+.typewriter h1 {
+  display: inline-block;
+  font-family: monospace;
+  font-size: 2rem;
+  white-space: nowrap;
+  overflow: hidden;
+  border-right: .1em solid black;
+  animation: typing 3s steps(30) 1s 1 normal both, blinkCaret .75s step-end infinite;
+}
+
+@keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+@keyframes blinkCaret {
+  50% {
+    border-color: transparent;
+  }
 }

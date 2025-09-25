@@ -130,7 +130,7 @@ const LeadForm = ({ onClose }: LeadFormProps) => {
           <Button
             type="submit"
             isLoading={loading}
-            className="bg-primary text-on-primary w-1/2 font-semibold text-xl"
+            className="bg-gradient-to-br from-primary to-secondary-container text-on-primary w-1/2 font-semibold text-xl"
           >
             Submit
           </Button>
