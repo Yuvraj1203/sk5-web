@@ -189,7 +189,7 @@ const Header = () => {
     >
       <div className="flex items-center justify-between max-w-[1250px] mx-auto px-4 py-1.5 md:py-2.5 ">
         <div className="">
-          <CustomImage src={Images.appLogo} width={64} height={64} alt="logo" />
+          <CustomImage src={Images.appLogo} width={117} height={85} alt="logo" />
         </div>
         {deviceType == "mobile" ? (
           <Sidebar

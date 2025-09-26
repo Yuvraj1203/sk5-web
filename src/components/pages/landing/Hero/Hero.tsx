@@ -32,7 +32,7 @@ const Hero = () => {
         {/* <p className="text-base md:text-xl xl:text-[26px] w-fit py-2 px-5 md:px-7.5 bg-primary">
           SK5 Business IT Solutions
         </p> */}
-        <TypeWriter words={["Growth-Focused", "your marketing partner", "your friend"]} />
+        <TypeWriter words={["Growth-Focused", "Your HVAC Marketing Partner"]} />
 
         <p className="text-lg md:text-xl xl:text-2xl">
           {

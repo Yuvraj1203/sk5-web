@@ -30,7 +30,7 @@ const Footer = () => {
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 max-w-[1100px] mx-auto max-md:gap-8">
         {/* logo div  */}
         <div className="flex flex-col px-5 md:px-12 items-center justify-between gap-5 md:gap-10 lg:border-r-1 border-secondary-container">
-          <CustomImage src={Images.appLogo} width={64} height={64} alt="logo" />
+          <CustomImage src={Images.appLogo} width={146} height={106} alt="logo" />
           <ScheduleButton
             buttonStyle={
               "uppercase rounded-full font-medium bg-gradient-to-br from-primary to-secondary-container text-on-secondary"
