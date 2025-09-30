@@ -20,13 +20,13 @@ const PreFooter = () => {
           Ready to Transform Your HVAC Business?
         </SectionHeading>
         <p className="">
-          Start your journey to more leads, more booked jobs, and long-term
+          Start your journey to more leads, more booked jobs, and long term
           growth—with zero upfront cost. Schedule a free strategy call and see
-          how our performance-first model, regional exclusivity, and 360° growth
+          how our performance first model, regional exclusivity, and 360° growth
           engine can give you an unbeatable edge.
         </p>
         <SectionSubHeading className="">
-          Let’s write the next chapter of your HVAC success story—risk-free.
+          Let’s write the next chapter of your HVAC success story risk free.
         </SectionSubHeading>
         <ScheduleButton buttonStyle="text-sm md:text-xl font-semibold px-6 py-4 md:px-12 md:py-8 w-fit rounded-full uppercase bg-on-background text-background hover:bg-background hover:text-on-background shadow-sm duration-250" />
       </div>

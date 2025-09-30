@@ -19,7 +19,7 @@ const AboutUs = () => {
           </SectionSubHeading>
           <p className="text-sm md:text-base font-medium">
             {
-              "Many MSPs face challenges in attracting quality leads that convert into long-term clients."
+              "Many MSPs face challenges in attracting quality leads that convert into long term clients."
             }
           </p>
           <p className="text-sm md:text-base font-medium">{`At Tech Pro Marketing, we understand that lead generation is more than just a numbers game—it's about attracting the right clients to grow your business sustainably.  Our approach is straightforward: we focus on effective, proven marketing strategies tailored specifically for MSPs.`}</p>

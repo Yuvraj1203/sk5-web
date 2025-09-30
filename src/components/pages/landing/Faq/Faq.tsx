@@ -6,7 +6,7 @@ const faqData = [
   {
     id: 1,
     title: "How is SK5 Marketing different from traditional agencies?",
-    desc: "Unlike agencies that charge upfront retainers, we work on a performance-first model with zero upfront costs. You only pay when our efforts directly generate sales for your HVAC business",
+    desc: "Unlike agencies that charge upfront retainers, we work on a performance first model with zero upfront costs. You only pay when our efforts directly generate sales for your HVAC business",
   },
   {
     id: 2,

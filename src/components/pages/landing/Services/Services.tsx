@@ -10,7 +10,7 @@ import React from "react";
 const serviceData = [
   {
     title: "Performance-Based",
-    content: `We grow your business without upfront risk. You only invest once results come in. Our performance-first model ensures your growth always comes before our earnings.`,
+    content: `We grow your business without upfront risk. You only invest once results come in. Our performance first model ensures your growth always comes before our earnings.`,
     color: "#67d5f8",
   },
   {
@@ -20,7 +20,7 @@ const serviceData = [
   },
   {
     title: "Exclusive Regions",
-    content: `We partner with only one HVAC company per region, giving you an unbeatable edge over competitors. This exclusivity ensures that all our efforts are focused on making you the go-to HVAC provider in your target market.`,
+    content: `We partner with only one HVAC company per region, giving you an unbeatable edge over competitors. This exclusivity ensures that all our efforts are focused on making you the go nto HVAC provider in your target market.`,
     color: "#153a67",
   },
 ];
@@ -36,12 +36,12 @@ const Services = () => {
         {"How SK5 Marketing Drives HVAC Business Growth"}
       </SectionHeading>
       <p className="font-semibold text-on-background text-lg md:text-xl xl:text-2xl">
-        {"Performance-Based. Strong Relationships. Exclusive Regions."}
+        {"Performance Based. Strong Relationships. Exclusive Regions."}
       </p>
 
       <p className="font-medium text-on-background text-sm md:text-base max-md:mt-2 mb-5 md:my-10">
         {
-          "The SK5 Growth Model is built on one powerful truth: most HVAC companies waste money on marketing that doesn’t guarantee results. Our performance-first system flips the script; you pay nothing upfront and only invest when real sales are made. To maximize your advantage, we work with only one HVAC company per region, giving you complete exclusivity. Backed by our 360° Growth Engine covering lead generation, appointment booking, and long-term organic strategies,"
+          "The SK5 Growth Model is built on one powerful truth: most HVAC companies waste money on marketing that doesn’t guarantee results. Our performance first system flips the script; you pay nothing upfront and only invest when real sales are made. To maximize your advantage, we work with only one HVAC company per region, giving you complete exclusivity. Backed by our 360° Growth Engine covering lead generation, appointment booking, and long term organic strategies,"
         }
       </p>
 

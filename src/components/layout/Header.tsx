@@ -37,27 +37,27 @@ const navbarList = [
     href: "",
     subList: [
       {
-        label: "Google and Social media advertising",
+        label: "Google and Social Media Advertising for HVAC",
         icon: "",
         href: "",
       },
       {
-        label: "Search engine optimization",
+        label: "HVAC Search Engine Optimization",
         icon: "",
         href: "",
       },
       {
-        label: "Social Media Optimization",
+        label: "HVAC Social Media Optimization",
         icon: "",
         href: "",
       },
       {
-        label: "GMB Optimization",
+        label: "HVAC GMB Optimization",
         icon: "",
         href: "",
       },
       {
-        label: "Appointment Booking",
+        label: "HVAC Appointment Booking",
         icon: "",
         href: "",
       },
@@ -74,7 +74,7 @@ const navbarList = [
         href: "",
       },
       {
-        label: "Rebait",
+        label: "Admin Assistant Support",
         icon: "",
         href: "",
       },
@@ -130,11 +130,15 @@ const Header = () => {
 
   const renderSublist = (item: subListType, index: number) => {
     return (
+
       <span
         key={index}
-        className="py-1.5 px-4 text-black hover:text-primary duration-400 text-nowrap cursor-pointer"
+        className="p-2.5 text-background bg-gradient-to-r from-primary to-secondary hover:opacity-80 duration-400 text-nowrap cursor-pointer"
       >
+              <span className="relative z-10">
         {item.label}
+        
+      </span>
       </span>
     );
   };
@@ -170,7 +174,7 @@ const Header = () => {
               hoverItem == index
                 ? "top-full opacity-100"
                 : "top-[200%] opacity-0"
-            } flex flex-col bg-background left-0 py-2.5 px-4 shadow-navbar-shadow rounded-sm duration-400`}
+            } flex flex-col bg-background left-0 shadow-navbar-shadow rounded-sm duration-400 divide-y-1 divide-background overflow-hidden`}
           >
             {item.subList?.map((item, index) => renderSublist(item, index))}
           </div>

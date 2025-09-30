@@ -71,7 +71,7 @@ function Sidebar({ sidebarTrigger, navbarList }: SidebarProps) {
             <div
               className={`w-full px-1.5 grid ${
                 clickedItem == index
-                  ? "grid-rows-[1fr] pt-4"
+                  ? "grid-rows-[1fr] pt-2"
                   : "grid-rows-[0fr]"
               }  duration-400`}
             >

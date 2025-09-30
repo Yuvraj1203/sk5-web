@@ -7,6 +7,7 @@
 :root {
   --foreground: #171717;
   --primary: #017fa3;
+  --primary-light: #0180a3de;
   --primary-shade: #003f50;
   --on-primary: #ffffff;
   --primary-container: #a6eeff;
@@ -26,6 +27,7 @@
 
   /* Black-Blue Accent */
   --secondary: #0d1b2a;
+  --secondary-light: #0d1b2ae4;
   --on-secondary: #ffffff;
   --secondary-container: #243447;
   --on-secondary-container: #e6f0ff;

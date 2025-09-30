@@ -27,12 +27,12 @@ const Hero = () => {
           {"Responsive. Fair. Transparent. Friendly."}
         </p> */}
         <SectionHeading className="max-md:text-3xl text-white leading-[1.2] mb-0">
-          {`No Cost. Risk-Free.`}
+          {`No Cost. Risk Free.`}
         </SectionHeading>
         {/* <p className="text-base md:text-xl xl:text-[26px] w-fit py-2 px-5 md:px-7.5 bg-primary">
           SK5 Business IT Solutions
         </p> */}
-        <TypeWriter words={["Growth-Focused", "Your HVAC Marketing Partner"]} />
+        <TypeWriter words={["Growth Focused"]} />
 
         <p className="text-lg md:text-xl xl:text-2xl">
           {
