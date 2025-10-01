@@ -47,7 +47,7 @@ const TypeWriter = (props:TypeWriterProps) => {
     return () => clearInterval(interval); // Clean up interval on component unmount
   }, [currentText, textIndex, currentWordIndex, deleting, words]);
 
-  return <h2 className="text-2xl md:text-3xl mb-4 font-semibold leading-[1.2] text-transparent bg-clip-text bg-gradient-to-r from-teal to-primary">{currentText}<span className="border-r-1 animate-[blinkCaret_1s_ease-in-out_infinite]">{' '}</span></h2>;
+  return <h2 className="text-center text-2xl md:text-3xl mb-4 font-semibold leading-[1.2] text-transparent bg-clip-text bg-gradient-to-r from-teal to-primary">{currentText}<span className="border-r-1 animate-[blinkCaret_1s_ease-in-out_infinite]">{' '}</span></h2>;
 };
 
 export default TypeWriter;

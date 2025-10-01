@@ -26,15 +26,15 @@ const Hero = () => {
         {/* <p className="text-xl lg:text-2xl">
           {"Responsive. Fair. Transparent. Friendly."}
         </p> */}
-        <SectionHeading className="max-md:text-3xl text-white leading-[1.2] mb-0">
+        <SectionHeading className="text-center max-md:text-3xl text-white leading-[1.2] mb-0">
           {`No Cost. Risk Free.`}
         </SectionHeading>
         {/* <p className="text-base md:text-xl xl:text-[26px] w-fit py-2 px-5 md:px-7.5 bg-primary">
           SK5 Business IT Solutions
         </p> */}
-        <TypeWriter words={["Growth Focused"]} />
+        <TypeWriter words={["'Growth Focused'"]} />
 
-        <p className="text-lg md:text-xl xl:text-2xl">
+        <p className="text-center text-lg md:text-xl xl:text-2xl">
           {
             "With zero upfront costs, SK5 HVAC Marketing guarantees growth, booked appointments, and filled pipelines, delivering long term success for one company per region."
           }

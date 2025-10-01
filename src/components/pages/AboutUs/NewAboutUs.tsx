@@ -45,7 +45,7 @@ const values = [
       "Decades of industry experience set us apart. Our team knows HVAC and marketing inside out. We apply that knowledge to create strategies that really work, cutting through trial and error to get you results faster.",
   },
   {
-    title: "Innovation :  ",
+    title: "Innovation : ",
     content:
       "We stay ahead of the curve. SK5 uses the latest marketing techniques and technologies to give you an edge. By continually improving and innovating, we make sure your HVAC business benefits from the best, most effective solutions.",
   },
@@ -63,7 +63,7 @@ At SK5, we focus on measurable results that drive your bottom line. We partner c
       <SectionHeading className="text-center">{"Our Approach"}</SectionHeading>
       {approach.map((item, index) => (
         <p key={index} className="text-sm md:text-lg font-medium">
-          <span className="font-semibold text-base md:text-2xl">{item.title}</span>
+          <span className="font-semibold text-base md:text-2xl mr-1">{item.title}</span>
           {item.content}
         </p>
       ))}
@@ -76,7 +76,7 @@ At SK5, we focus on measurable results that drive your bottom line. We partner c
       </SectionSubHeading>
       {values.map((item, index) => (
         <p key={index} className="text-sm md:text-lg font-medium">
-          <span className="font-semibold text-base md:text-2xl">{item.title}</span>
+          <span className="font-semibold text-base md:text-2xl mr-1">{item.title}</span>
           {item.content}
         </p>
       ))}
