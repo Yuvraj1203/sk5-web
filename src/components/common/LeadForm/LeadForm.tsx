@@ -21,7 +21,7 @@ const LeadForm = ({ onClose }: LeadFormProps) => {
     const form = e.currentTarget;
     const data = new FormData(form);
 
-    const res = await fetch("https://formspree.io/f/xnnblvdl", {
+    const res = await fetch("https://formspree.io/f/xpwyrnry", {
       method: "POST",
       body: data,
       headers: {
@@ -48,13 +48,12 @@ const LeadForm = ({ onClose }: LeadFormProps) => {
 
   const Success = () => {
     return (
-      <div className="self-center py-2">
         <div
-          className={`scale-125 bg-white rounded-full p-6 shadow-lg flex items-center justify-center duration-400`}
+          className={`bg-transparent rounded-full flex items-center justify-center`}
         >
           <svg
             xmlns="http://www.w3.org/2000/svg"
-            className="w-16 h-16 text-green-500 animate-scaleIn"
+            className="w-4 h-4 md:w-8 md:h-8 text-green-500 animate-scaleIn"
             fill="none"
             viewBox="0 0 24 24"
             strokeWidth={3}
@@ -67,16 +66,11 @@ const LeadForm = ({ onClose }: LeadFormProps) => {
             />
           </svg>
         </div>
-      </div>
     );
   };
 
   return (
     <Form className="relative flex flex-col w-full gap-4 " onSubmit={onSubmit}>
-      {submitted ? (
-        <Success />
-      ) : (
-        <>
           <Input
             isRequired={true}
             variant={"flat"}
@@ -130,12 +124,11 @@ const LeadForm = ({ onClose }: LeadFormProps) => {
           <Button
             type="submit"
             isLoading={loading}
+            startContent={submitted && <Success />}
             className="bg-gradient-to-br from-primary to-secondary-container text-on-primary w-1/2 font-semibold text-xl"
           >
             Submit
           </Button>
-        </>
-      )}
     </Form>
   );
 };
