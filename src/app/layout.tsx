@@ -4,6 +4,7 @@ import "./globals.css";
 import { Providers } from "./providers";
 import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
+import Script from "next/script";
 
 const poppins = Poppins({
   variable: "--font-poppins",
@@ -23,6 +24,22 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
+      <head>
+        {/* ✅ Google Analytics Script (async external script) */}
+        <Script
+          src="https://www.googletagmanager.com/gtag/js?id=G-SBPDDF7FH1"
+          strategy="afterInteractive"
+        />
+        {/* ✅ Inline configuration for Google Analytics */}
+        <Script id="gtag-init" strategy="afterInteractive">
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'G-SBPDDF7FH1');
+          `}
+        </Script>
+      </head>
       <body className={` ${poppins.variable} scroll-smooth antialiased`}>
         <Providers>
           <Header />
