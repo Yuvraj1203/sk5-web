@@ -15,6 +15,9 @@ const poppins = Poppins({
 export const metadata: Metadata = {
   title: "SK5 Marketing",
   description: "Your HVAC Marketing Partner",
+  icons: {
+    icon: "/favicon.ico", // or "/favicon.png"
+  },
 };
 
 export default function RootLayout({
