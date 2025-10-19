@@ -5,13 +5,13 @@ import HeroForm from "../landing/Hero/HeroForm";
 const generalContact = [
   {
     label: "Email: ",
-    value: "info@sk5.com",
-    href: "mailto:info@sk5.com",
+    value: "bhanu@sk5marketing.com",
+    href: "mailto:bhanu@sk5marketing.com",
   },
   {
     label: "Phone: ",
-    value: "(855) 964-2608",
-    href: "tel:+18559642608",
+    value: "9829252989",
+    href: "tel:+919829252989",
   },
 ];
 
@@ -40,15 +40,13 @@ const ContactUs = () => {
           ))}
         </div>
         <div className="flex flex-col gap-1.5 md:gap-3">
-          <p className="text-base lg:text-xl font-semibold">
-            {"Mailing Address"}
-          </p>
+          <p className="text-base lg:text-xl font-semibold">{"Address"}</p>
           <p className="text-sm lg:text-lg ">
-            SK5 Marketing, LLC
+            Karthik Naragr Society, C48, Vasna Saiyed Rd
             <br />
-            11 Northwest Passage
+            Vrundavan Township, Vibhah 2, Saiyed Vasna
             <br />
-            Barrington, RI 02806
+            Varodara, Gujrat 390007
           </p>
         </div>
       </div>

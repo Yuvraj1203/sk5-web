@@ -19,7 +19,7 @@ const approach = [
   {
     title: "Exclusive Regions :  ",
     content:
-      "We grant exclusive marketing territories to each client. That means your leads are yours alone – we won’t pump multiple HVAC companies into the same area. This approach protects your market and ensures you get genuine local opportunities.",
+      "We grant exclusive marketing territories to each client. That means your leads are yours alone – we won’t pump multiple Home Service Businesses companies into the same area. This approach protects your market and ensures you get genuine local opportunities.",
   },
 ];
 
@@ -42,12 +42,12 @@ const values = [
   {
     title: "Expertise :  ",
     content:
-      "Decades of industry experience set us apart. Our team knows HVAC and marketing inside out. We apply that knowledge to create strategies that really work, cutting through trial and error to get you results faster.",
+      "Decades of industry experience set us apart. Our team knows Home Service Businesses and marketing inside out. We apply that knowledge to create strategies that really work, cutting through trial and error to get you results faster.",
   },
   {
     title: "Innovation : ",
     content:
-      "We stay ahead of the curve. SK5 uses the latest marketing techniques and technologies to give you an edge. By continually improving and innovating, we make sure your HVAC business benefits from the best, most effective solutions.",
+      "We stay ahead of the curve. SK5 uses the latest marketing techniques and technologies to give you an edge. By continually improving and innovating, we make sure your Home Service Businesses benefits from the best, most effective solutions.",
   },
 ];
 
@@ -56,14 +56,16 @@ const NewAboutUs = () => {
     <Section containerStyle={``} className="flex flex-col gap-5 md:gap-10">
       <SectionHeading className="text-center">{"About Us"}</SectionHeading>
       <p className="text-sm md:text-lg font-medium">
-        {`SK5 didn’t just appear overnight. It was founded by a team of seasoned HVAC marketing experts who spent years generating high quality leads for HVAC companies. With that deep experience and proven expertise, we decided to launch SK5 as our own agency. Our mission is simple: to help HVAC businesses close more deals efficiently, without wasted time or budget. We take the strategies that work and tailor them specifically for your business and market.
+        {`SK5 didn’t just appear overnight. It was founded by a team of seasoned Home Service Businesses marketing experts who spent years generating high quality leads for Home Service Businesses companies. With that deep experience and proven expertise, we decided to launch SK5 as our own agency. Our mission is simple: to help Home Service Businesses close more deals efficiently, without wasted time or budget. We take the strategies that work and tailor them specifically for your business and market.
 At SK5, we focus on measurable results that drive your bottom line. We partner closely with each client, taking the time to understand your unique needs and goals. You’re not just another customer you’re our partner in success. By combining performance driven marketing with strong industry relationships, we make sure every campaign maximizes your return on investment.`}
       </p>
 
       <SectionHeading className="text-center">{"Our Approach"}</SectionHeading>
       {approach.map((item, index) => (
         <p key={index} className="text-sm md:text-lg font-medium">
-          <span className="font-semibold text-base md:text-2xl mr-1">{item.title}</span>
+          <span className="font-semibold text-base md:text-2xl mr-1">
+            {item.title}
+          </span>
           {item.content}
         </p>
       ))}
@@ -76,7 +78,9 @@ At SK5, we focus on measurable results that drive your bottom line. We partner c
       </SectionSubHeading>
       {values.map((item, index) => (
         <p key={index} className="text-sm md:text-lg font-medium">
-          <span className="font-semibold text-base md:text-2xl mr-1">{item.title}</span>
+          <span className="font-semibold text-base md:text-2xl mr-1">
+            {item.title}
+          </span>
           {item.content}
         </p>
       ))}

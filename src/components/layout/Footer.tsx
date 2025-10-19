@@ -30,7 +30,12 @@ const Footer = () => {
       <div className="grid grid-cols-1 lg:grid-cols-4 max-w-[1100px] mx-auto max-lg:gap-8">
         {/* logo div  */}
         <div className="flex flex-col px-5 md:px-12 items-center justify-between gap-5 md:gap-10 lg:border-r-1 border-secondary-container">
-          <CustomImage src={Images.appLogo} width={146} height={106} alt="logo" />
+          <CustomImage
+            src={Images.appLogo}
+            width={146}
+            height={106}
+            alt="logo"
+          />
           <ScheduleButton
             buttonStyle={
               "uppercase rounded-full font-medium bg-gradient-to-br from-primary to-secondary-container text-on-secondary"
@@ -75,15 +80,24 @@ const Footer = () => {
         {/* social div  */}
         <div className="flex flex-col items-center justify-between px-5 md:px-12 gap-5 md:gap-10 text-on-secondary">
           <div className="flex items-center justify-center gap-3 md:gap-6 w-full">
-            <span className="size-9 rounded-full flex items-center justify-center bg-gradient-to-br from-primary to-secondary-container">
+            <Link
+              href={"https://www.facebook.com/profile.php?id=61581608762708"}
+              className="size-9 rounded-full flex items-center justify-center bg-gradient-to-br from-primary to-secondary-container"
+            >
               <FaFacebookF size={20} />
-            </span>
-            <span className="size-9 rounded-full flex items-center justify-center bg-gradient-to-br from-primary to-secondary-container">
+            </Link>
+            <Link
+              href={"https://www.instagram.com/sk5marketing"}
+              className="size-9 rounded-full flex items-center justify-center bg-gradient-to-br from-primary to-secondary-container"
+            >
               <FaInstagram size={20} />
-            </span>
-            <span className="size-9 rounded-full flex items-center justify-center bg-gradient-to-br from-primary to-secondary-container">
+            </Link>
+            <Link
+              href={"https://www.linkedin.com/company/sk5-marketing"}
+              className="size-9 rounded-full flex items-center justify-center bg-gradient-to-br from-primary to-secondary-container"
+            >
               <FaLinkedinIn size={20} />
-            </span>
+            </Link>
           </div>
           <p className="text-sm text-center">
             © {year} Your Marketing Co. All rights reserved.

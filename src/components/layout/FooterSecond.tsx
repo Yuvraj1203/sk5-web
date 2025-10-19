@@ -130,7 +130,7 @@ const FooterSecond = () => {
             </h3>
             <ul className="mt-4 space-y-2 text-sm text-[--on-surface-variant]">
               <li>Email: hello@sk5.com</li>
-              <li>Phone: +91 99999 99999</li>
+              <li>Phone: +919829252989</li>
               <li>Address: Udaipur, Rajasthan, IN</li>
             </ul>
           </div>

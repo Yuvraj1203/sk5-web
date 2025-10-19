@@ -36,7 +36,7 @@ const Hero = () => {
 
         <p className="text-center text-lg md:text-xl xl:text-2xl">
           {
-            "With zero upfront costs, SK5 HVAC Marketing guarantees growth, booked appointments, and filled pipelines, delivering long term success for one company per region."
+            "With zero upfront costs, SK5 Home Service Marketing guarantees growth, booked appointments, and filled pipelines, delivering long term success for one company per region."
           }
         </p>
 

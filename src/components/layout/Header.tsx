@@ -37,27 +37,27 @@ const navbarList = [
     href: "",
     subList: [
       {
-        label: "Google and Social Media Advertising for HVAC",
+        label: "Google and Social Media Advertising",
         icon: "",
         href: "",
       },
       {
-        label: "HVAC Search Engine Optimization",
+        label: "Search Engine Optimization",
         icon: "",
         href: "",
       },
       {
-        label: "HVAC Social Media Optimization",
+        label: "Social Media Optimization",
         icon: "",
         href: "",
       },
       {
-        label: "HVAC GMB Optimization",
+        label: "GMB Optimization",
         icon: "",
         href: "",
       },
       {
-        label: "HVAC Appointment Booking",
+        label: "Appointment Booking",
         icon: "",
         href: "",
       },
@@ -130,15 +130,11 @@ const Header = () => {
 
   const renderSublist = (item: subListType, index: number) => {
     return (
-
       <span
         key={index}
         className="p-2.5 text-background bg-gradient-to-r from-primary to-secondary hover:opacity-80 duration-400 text-nowrap cursor-pointer"
       >
-              <span className="relative z-10">
-        {item.label}
-        
-      </span>
+        <span className="relative z-10">{item.label}</span>
       </span>
     );
   };
@@ -193,7 +189,13 @@ const Header = () => {
     >
       <div className="flex items-center justify-between max-w-[1250px] mx-auto px-4 py-1.5 md:py-2.5 ">
         <div className="">
-          <CustomImage src={Images.appLogo} width={150} height={90} alt="logo" containerStyle="!max-w-[150px]" />
+          <CustomImage
+            src={Images.appLogo}
+            width={150}
+            height={90}
+            alt="logo"
+            containerStyle="!max-w-[150px]"
+          />
         </div>
         {deviceType == "mobile" ? (
           <Sidebar
