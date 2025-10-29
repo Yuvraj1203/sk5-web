@@ -10,7 +10,7 @@ const generalContact = [
   },
   {
     label: "Phone: ",
-    value: "9829252989",
+    value: "+91 9829252989",
     href: "tel:+919829252989",
   },
 ];
@@ -39,8 +39,10 @@ const ContactUs = () => {
             </p>
           ))}
         </div>
-        <div className="flex flex-col gap-1.5 md:gap-3">
-          <p className="text-base lg:text-xl font-semibold">{"Address"}</p>
+        {/* <div className="flex flex-col gap-1.5 md:gap-3">
+          <p className="text-base lg:text-xl font-semibold">
+            {"Mailing Address"}
+          </p>
           <p className="text-sm lg:text-lg ">
             Karthik Naragr Society, C48, Vasna Saiyed Rd
             <br />
@@ -48,7 +50,7 @@ const ContactUs = () => {
             <br />
             Varodara, Gujrat 390007
           </p>
-        </div>
+        </div> */}
       </div>
 
       {/* right div  */}
