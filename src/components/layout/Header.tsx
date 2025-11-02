@@ -90,10 +90,67 @@ const navbarList = [
   //   icon: "",
   //   href: "/career",
   // },
+  // {
+  //   label: "About Us",
+  //   icon: "",
+  //   href: "/about",
+  // },
   {
-    label: "About Us",
+    label: "Industries We Serve",
     icon: "",
-    href: "/about",
+    href: "",
+    subList: [
+      {
+        label: "HVAC",
+        icon: "",
+        href: "",
+      },
+      {
+        label: "Plumbing",
+        icon: "",
+        href: "",
+      },
+      {
+        label: "Insulation",
+        icon: "",
+        href: "",
+      },
+      {
+        label: "Solar",
+        icon: "",
+        href: "",
+      },
+      {
+        label: "Roofing & Gutters",
+        icon: "",
+        href: "",
+      },
+      {
+        label: "Windows & Doors",
+        icon: "",
+        href: "",
+      },
+      {
+        label: "Water Filtration / Purification Systems",
+        icon: "",
+        href: "",
+      },
+      {
+        label: "Commercial Cleaning / Sanitization",
+        icon: "",
+        href: "",
+      },
+      {
+        label: "Auto Detailing / Ceramic Coating / Vehicle Wraps",
+        icon: "",
+        href: "",
+      },
+      {
+        label: "Home Security / CCTV Installation",
+        icon: "",
+        href: "",
+      },
+    ],
   },
   {
     label: "Contact Us",
